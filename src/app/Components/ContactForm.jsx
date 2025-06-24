@@ -68,7 +68,7 @@ export default function ContactUs() {
     >
       {/* Left Content */}
       <div className="flex flex-col justify-center space-y-8 text-black">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-semibold leading-tight">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-semibold leading-tight text-[#284d8a]">
           Your Success Starts Here <br className="hidden md:inline" /> Contact Us
         </h1>
 

@@ -14,19 +14,19 @@ const Navbar = () => {
   ];
 
   const getLinkClasses = (id) =>
-    `relative text-xl font-semibold text-black after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full ${
+    `relative text-xl font-medium text-black after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full ${
       active === id ? "after:w-full" : ""
     }`;
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white px-[20px] lg:px-20 py-4 border-b border-gray-200 shadow-sm">
-      <div className="flex justify-between items-center w-full text-black">
+      <div className="flex justify-between items-center w-full">
         <a href="/" className="flex items-center">
           <Image 
             src={logo}
             alt="BPOBrigade Logo"
-            className="object-contain w-20 sm:w-24 md:w-30 lg:w-36" // Responsive logo size
-            priority // Optional: if this is above the fold
+            className="object-contain w-20 sm:w-24 md:w-30 lg:w-36" 
+            priority 
           />
         </a>
 
@@ -46,7 +46,7 @@ const Navbar = () => {
           </div>
           <div className="ml-20">
             <a href="#contact-form">
-              <button className="border-2 cursor-pointer border-black rounded-full px-6 py-2 text-xl font-semibold text-black transition duration-300 hover:bg-blue-500 hover:text-white">
+              <button className="border-2 cursor-pointer border-[#284d8a] rounded-full px-6 py-2 text-xl font-medium text-[#284d8a] transition duration-300 hover:bg-[#284d8a] hover:text-white">
                 Let's Talk
               </button>
             </a>
@@ -79,14 +79,14 @@ const Navbar = () => {
 
       {/* Mobile Slide Menu */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-black text-white z-50 transform ${
+        className={`fixed top-0 right-0 h-full w-64 bg-white text-black z-50 transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out rounded-l-3xl shadow-lg`}
       >
         <div className="flex justify-end p-4">
           <button onClick={() => setIsOpen(false)} aria-label="Close menu">
             <svg
-              className="w-8 h-8 text-white"
+              className="w-8 h-8 text-black"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -106,7 +106,7 @@ const Navbar = () => {
             <a
               key={link.id}
               href={link.href}
-              className={`relative text-xl font-semibold after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full ${
+              className={`relative text-xl font-semibold text-black after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full ${
                 active === link.id ? "after:w-full" : ""
               }`}
               onClick={() => {
@@ -119,7 +119,7 @@ const Navbar = () => {
           ))}
 
           <a href="#contact-form" onClick={() => setIsOpen(false)}>
-            <button className="mt-8 border border-white rounded-full px-8 py-3 text-xl font-medium text-black bg-white cursor-pointer transition duration-300 hover:bg-blue-500 hover:text-white">
+            <button className="mt-8 border border-[#284d8a] rounded-full px-8 py-3 text-xl font-medium text-[#284d8a] bg-white cursor-pointer transition duration-300 hover:bg-[#284d8a] hover:text-white">
               Let's Talk
             </button>
           </a>

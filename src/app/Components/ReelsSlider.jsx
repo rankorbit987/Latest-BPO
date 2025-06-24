@@ -166,7 +166,7 @@ export default function MusicSlider() {
         {videos.map((video) => (
           <button
             key={video.id}
-            className={`w-3 h-3 rounded-full ${selected === video.id ? "bg-blue-500" : "bg-white/70"}`}
+            className={`w-3 h-3 rounded-full ${selected === video.id ? "bg-[#284d8a]" : "bg-white/70"}`}
             onClick={() => setSelected(video.id)}
           />
         ))}

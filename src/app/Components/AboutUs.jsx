@@ -10,7 +10,7 @@ export default function AboutUs() {
     >
       {/* Intro paragraph */}
       <div className="mb-10 sm:mb-14 md:mb-16 max-w-5xl">
-        <h1 className="text-2xl md:text-3xl lg:text-4xl md:font-semibold font-medium leading-tight mb-10 text-black">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl md:font-semibold font-medium leading-tight mb-10 text-[#284d8a]">
           At BPO Brigade, we believe every task deserves genuine care. We began small, serving local clients with one clear focus — quality. Through well-defined processes, continuous feedback, and full accountability, we built strong client trust from day one.
         </h1>
       </div>

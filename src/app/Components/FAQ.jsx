@@ -55,7 +55,7 @@ export default function FaqSection() {
           <p className="inline-block font-semibold text-primary mb-4">
             FAQs
           </p>
-          <p className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-base-content">
+          <p className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-base-content text-[#284d8a]">
             Your Common Questions Answered
           </p>
         </div>

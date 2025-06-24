@@ -6,7 +6,7 @@ const InTheNumbers = () => {
     <section className="w-full bg-white text-black px-6 md:px-20 py-12">
       {/* Top Section */}
       <div className="flex flex-col md:flex-row md:justify-between items-start md:items-center mb-12 border-t-3 border-black pt-6">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold tracking-tight leading-tight">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold tracking-tight leading-tight text-[#284d8a]">
           The Numbers Speak For Themselves
         </h2>
         <p className="text-base md:text-lg max-w-xl mt-7 md:mt-0">

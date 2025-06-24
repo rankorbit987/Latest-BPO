@@ -13,8 +13,8 @@ const GetInTouchBtn = () => {
           bg-white px-6 py-3 pl-3
           text-base font-medium text-black
           transition-all duration-300 ease-in-out
-          hover:bg-blue-600 hover:text-white hover:border-blue-600
-          focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600
+          hover:bg-[#284d8a] hover:text-white hover:border-[#284d8a]
+          focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#284d8a]
           whitespace-nowrap overflow-hidden text-ellipsis
           relative
           group
