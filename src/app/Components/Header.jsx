@@ -79,7 +79,7 @@ const Navbar = () => {
 
       {/* Mobile Slide Menu - Updated to slide from left with rounded right borders */}
       <div
-        className={`fixed top-0 left-0 h-full w-[100%] max-w-md bg-black text-white z-50 transform ${
+        className={`fixed top-0 left-0 h-[70%] w-[100%] max-w-md bg-black text-white z-50 transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 ease-in-out rounded-r-3xl overflow-hidden`}
       >
