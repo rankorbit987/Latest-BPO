@@ -33,7 +33,7 @@ const LinkedinButton = () => {
     >
       <span className="
         flex-shrink-0
-        w-12 h-12 
+        lg:w-12 w-8 lg:h-12 h-8
         relative
         text-black
         bg-white

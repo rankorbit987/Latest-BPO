@@ -24,16 +24,15 @@ export default function Services() {
                 ${!isActive ? item.hoverColor : ""}
                 ${index !== 0 ? '-mt-4 sm:-mt-5 md:-mt-7' : ''}`}
             >
+              {/* Header content - stays fixed */}
               <div
                 className="grid grid-cols-12 items-start w-full p-6 md:p-8 min-h-[120px] sm:min-h-[150px] md:min-h-[180px] cursor-pointer"
                 onClick={() => toggleCard(index)}
               >
-                {/* First Column - CAPABILITIES / (wider column) */}
                 <div className="col-span-12 md:col-span-4 text-xs sm:text-sm md:text-xs uppercase tracking-wider">
                   SERVICES /
                 </div>
 
-                {/* Second Column - Service Title - moved below on mobile */}
                 <div className="col-span-10 md:col-span-7 lg:ml-58 md:ml-0 text-start mt-2 md:mt-0">
                   <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium uppercase">
                     {item.title}
@@ -45,7 +44,6 @@ export default function Services() {
                   )}
                 </div>
 
-                {/* Third Column - Plus/Minus Icon (right-aligned) */}
                 <div className="col-span-2 md:col-span-1 flex justify-end">
                   <div
                     className={`flex justify-center items-center border border-black rounded-full transition duration-300 
@@ -61,22 +59,53 @@ export default function Services() {
                 </div>
               </div>
 
+              {/* Hover content - appears below without shifting header */}
               {!isActive && (
-                <div className="px-6 md:px-8 pb-4 md:pb-6 hidden md:group-hover:block">
-                  <p className="text-base sm:text-lg md:text-xl leading-relaxed line-clamp-2">
-                    {item.content[0].description}
-                  </p>
+                <div className="px-6 md:px-8 pb-4 md:pb-6 hidden md:group-hover:block transition-all duration-300">
+                  <div className="flex flex-col md:flex-row gap-6 md:gap-8">
+                    <div className="w-full md:w-1/2">
+                      <ul className="space-y-4 sm:space-y-6 md:space-y-8">
+                        {item.content.slice(0, 1).map((service, idx) => (
+                          <li key={idx} className="mb-4 md:mb-8">
+                            <h4 className="text-base md:text-lg mb-1 sm:mb-2 uppercase">
+                              {service.title}
+                            </h4>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className="w-full md:w-1/2">
+                      <div className="space-y-4 md:space-y-8">
+                        {item.content.slice(0, 1).map((service, idx) => (
+                          <div key={idx} className="mb-4 sm:mb-6 md:mb-8">
+                            <p className="text-base sm:text-lg md:text-xl font-semibold leading-relaxed line-clamp-2">
+                              {service.description}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
                 </div>
               )}
 
-              {isActive && (
+              {/* Expanded content - smooth animation */}
+              <div 
+                className={`overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] 
+                  ${isActive ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0'}`}
+                style={{
+                  transitionProperty: 'max-height, opacity',
+                  willChange: 'max-height, opacity'
+                }}
+              >
                 <div className="p-6 md:p-8 border-t border-gray-300">
                   <div className="flex flex-col md:flex-row gap-6 md:gap-8">
                     <div className="w-full md:w-1/2">
                       <ul className="space-y-4 sm:space-y-6 md:space-y-8">
                         {item.content.map((service, idx) => (
                           <li key={idx} className="mb-4 sm:mb-6 md:mb-8">
-                            <h4 className="text-base  md:text-lg mb-1 sm:mb-2 uppercase">
+                            <h4 className="text-base md:text-lg mb-1 sm:mb-2 uppercase">
                               {service.title}
                             </h4>
                           </li>
@@ -101,7 +130,7 @@ export default function Services() {
                     </div>
                   </div>
 
-                  {/* Case Study Cards Grid - Added left margin on large screens */}
+                  {/* Case Study Cards Grid */}
                   <div className="mt-8 sm:mt-10 md:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ml-0 lg:ml-[25%]">
                     {item.caseStudies.map((card, idx) => (
                       <ServicesCard
@@ -113,7 +142,7 @@ export default function Services() {
                     ))}
                   </div>
                 </div>
-              )}
+              </div>
             </div>
           );
         })}
