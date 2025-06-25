@@ -35,3 +35,7 @@ html {
 .animate-fade {
   animation: fade 0.5s ease-out 1.5s forwards;
 }
+
+body {
+  -webkit-tap-highlight-color: transparent;
+}
