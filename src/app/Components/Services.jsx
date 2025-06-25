@@ -12,7 +12,7 @@ export default function Services() {
   };
 
   return (
-    <section id="services-section" className="w-full py-12 md:py-20  text-black bg-white">
+    <section id="services-section" className="w-full py-12 md:py-20 text-black bg-white">
       <div className="relative w-full max-w-full">
         {servicesData.map((item, index) => {
           const isActive = activeCard === index;
@@ -26,7 +26,7 @@ export default function Services() {
             >
               {/* Header content - stays fixed */}
               <div
-                className="grid grid-cols-12 items-start w-full p-6 md:p-8 min-h-[120px] sm:min-h-[150px] md:min-h-[180px] cursor-pointer"
+                className="grid grid-cols-12 items-start w-full p-6 md:p-8 min-h-[120px] sm:min-h-[150px] md:min-h-[140px] cursor-pointer"
                 onClick={() => toggleCard(index)}
               >
                 <div className="col-span-12 md:col-span-4 text-xs sm:text-sm md:text-xs uppercase tracking-wider">
@@ -90,16 +90,16 @@ export default function Services() {
                 </div>
               )}
 
-              {/* Expanded content - smooth animation */}
+              {/* Expanded content - smooth animation with scrollable area */}
               <div 
                 className={`overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] 
-                  ${isActive ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0'}`}
+                  ${isActive ? 'max-h-[80vh] opacity-100' : 'max-h-0 opacity-0'}`}
                 style={{
                   transitionProperty: 'max-height, opacity',
                   willChange: 'max-height, opacity'
                 }}
               >
-                <div className="p-6 md:p-8 border-t border-gray-300">
+                <div className="p-6 md:p-8 border-t border-gray-300 overflow-y-auto max-h-[calc(80vh-180px)]">
                   <div className="flex flex-col md:flex-row gap-6 md:gap-8">
                     <div className="w-full md:w-1/2">
                       <ul className="space-y-4 sm:space-y-6 md:space-y-8">
