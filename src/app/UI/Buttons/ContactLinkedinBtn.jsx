@@ -1,62 +1,75 @@
 "use client";
 import React from "react";
-import { FaLinkedinIn } from "react-icons/fa6";
+import { Linkedin } from "lucide-react";
 
 const LinkedinButton = () => {
-  const handleClick = () => {
-    window.open("https://www.linkedin.com/company/bpobrigade/", "_blank");
+  const scrollToContactForm = () => {
+    const target = document.getElementById("contact-form");
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
-    <button
+    <button 
       type="button"
-      onClick={handleClick}
+      onClick={scrollToContactForm}
       className="
         inline-flex items-center justify-center cursor-pointer
-        rounded-full border-2 border-black
-        bg-white px-6 py-3 pl-3
-        md:text-lg text-base font-medium text-black
+        rounded-full border border-black
+        bg-white px-1 py-1
+        text-black
         transition-all duration-300 ease-in-out
         hover:bg-[#284d8a] hover:text-white hover:border-[#284d8a]
+        active:bg-[#284d8a] active:text-white active:border-[#284d8a]
         focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#284d8a]
-        whitespace-nowrap overflow-hidden text-ellipsis
+        whitespace-nowrap overflow-hidden 
         relative
         group
       "
+      style={{
+        WebkitTapHighlightColor: "transparent"
+      }}
     >
-      <span
-        className="
-          flex-shrink-0
-          w-8 h-8
-          relative
-          text-black
-          bg-white
-          border-2 border-black
-          rounded-full
-          flex items-center justify-center
-          overflow-hidden
-          mr-2
-          transition-all duration-300 ease-in-out
-          group-hover:bg-white group-hover:border-white
-        "
-      >
-        <FaLinkedinIn
-          className="
-            w-3.5 h-3.5
-            transition-transform duration-300 ease-in-out
-            group-hover:translate-x-[150%] group-hover:-translate-y-[150%]
-          "
-        />
-        <FaLinkedinIn
-          className="
-            absolute w-3.5 h-3.5
-            transition-transform duration-300 ease-in-out delay-100
-            -translate-x-[150%] translate-y-[150%]
-            group-hover:translate-x-0 group-hover:translate-y-0
-          "
-        />
+      <span className="
+        flex-shrink-0
+        w-12 h-12 
+        relative
+        text-black
+        bg-white
+        border border-black
+        rounded-full
+        flex items-center justify-center
+        overflow-hidden
+        mr-3
+        transition-all duration-300 ease-in-out
+        group-hover:bg-white group-hover:border-white
+        group-active:bg-white group-active:border-white
+      ">
+
+        {/* Wrapper for icons */}
+        <span className="relative w-4 h-4 text-black">
+          <Linkedin 
+            className="
+              absolute w-4 h-4 
+              transition-transform transition-opacity duration-300 ease-in-out
+              group-hover:translate-x-[150%] group-hover:opacity-0
+              group-active:translate-x-[150%] group-active:opacity-0
+            "
+          />
+          <Linkedin 
+            className="
+              absolute w-4 h-4 
+              transition-transform transition-opacity duration-300 ease-in-out delay-100
+              translate-x-[-150%] opacity-0
+              group-hover:translate-x-0 group-hover:opacity-100
+              group-active:translate-x-0 group-active:opacity-100
+            "
+          />
+        </span>
+
       </span>
-      <span className="ml-1">LinkedIn</span>
+      <span className="mr-3 md:text-lg text-base font-normal">Linkedin</span>
     </button>
   );
 };

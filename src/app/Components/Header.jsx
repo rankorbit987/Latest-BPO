@@ -14,12 +14,12 @@ const Navbar = () => {
   ];
 
   const getLinkClasses = (id) =>
-    `relative text-xl font-medium text-black after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full ${
+    `relative text-lg font-semibold text-black after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full ${
       active === id ? "after:w-full" : ""
     }`;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white px-[20px] lg:px-20 py-4 border-b border-gray-200 shadow-sm">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white px-[20px] lg:px-20 py-2">
       <div className="flex justify-between items-center w-full">
         <a href="/" className="flex items-center">
           <Image 
@@ -44,9 +44,9 @@ const Navbar = () => {
               </a>
             ))}
           </div>
-          <div className="ml-20">
+          <div className="ml-40">
             <a href="#contact-form">
-              <button className="border-2 cursor-pointer border-[#284d8a] rounded-full px-6 py-2 text-xl font-medium text-[#284d8a] transition duration-300 hover:bg-[#284d8a] hover:text-white">
+              <button className="border cursor-pointer border-black rounded-full px-6 py-2 text-lg font-semibold text-black transition duration-300 hover:bg-[#284d8a] hover:text-white hover:border-[#284d8a]">
                 Let's Talk
               </button>
             </a>
@@ -77,13 +77,14 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Slide Menu */}
+      {/* Mobile Slide Menu - Updated to slide from left with rounded right borders */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-[#284d8a] text-white z-50 transform ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        } transition-transform duration-300 ease-in-out rounded-l-3xl shadow-lg`}
+        className={`fixed top-0 left-0 h-full w-[100%] max-w-md bg-black text-white z-50 transform ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        } transition-transform duration-300 ease-in-out rounded-r-3xl overflow-hidden`}
       >
-        <div className="flex justify-end p-4">
+        {/* Close button only in top right corner */}
+        <div className="flex justify-end p-6">
           <button onClick={() => setIsOpen(false)} aria-label="Close menu">
             <svg
               className="w-8 h-8 text-white"
@@ -101,12 +102,12 @@ const Navbar = () => {
           </button>
         </div>
 
-        <div className="flex flex-col items-center justify-center gap-6 mt-10">
+        <div className="flex flex-col items-start px-6 py-4 gap-8 h-[calc(100%-80px)] overflow-y-auto">
           {navLinks.map((link) => (
             <a
               key={link.id}
               href={link.href}
-              className={`relative text-xl font-semibold text-white after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full ${
+              className={`relative text-2xl font-semibold text-white after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full ${
                 active === link.id ? "after:w-full" : ""
               }`}
               onClick={() => {
@@ -118,11 +119,17 @@ const Navbar = () => {
             </a>
           ))}
 
-          <a href="#contact-form" onClick={() => setIsOpen(false)}>
-            <button className="mt-8 border border-white rounded-full px-8 py-3 text-xl font-medium text-[#284d8a] bg-white cursor-pointer transition duration-300 hover:bg-[#284d8a] hover:text-white">
-              Let's Talk
-            </button>
-          </a>
+          <div className="mt-auto w-full pb-8">
+            <a 
+              href="#contact-form" 
+              onClick={() => setIsOpen(false)}
+              className="w-full"
+            >
+              <button className="w-full border border-white rounded-full px-8 py-4 text-xl font-medium text-black bg-white cursor-pointer transition duration-300 hover:bg-[#284d8a] hover:text-white">
+                Let's Talk
+              </button>
+            </a>
+          </div>
         </div>
       </div>
     </nav>

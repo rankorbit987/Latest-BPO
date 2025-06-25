@@ -21,13 +21,14 @@ const ContactUsButton = () => {
         text-black
         transition-all duration-300 ease-in-out
         hover:bg-[#284d8a] hover:text-white hover:border-[#284d8a]
+        active:bg-[#284d8a] active:text-white active:border-[#284d8a]
         focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#284d8a]
         whitespace-nowrap overflow-hidden 
         relative
         group
       "
       style={{
-        WebkitTapHighlightColor: "transparent"  // ✅ This disables mobile tap highlight
+        WebkitTapHighlightColor: "transparent"
       }}
     >
       <span className="
@@ -43,6 +44,7 @@ const ContactUsButton = () => {
         mr-3
         transition-all duration-300 ease-in-out
         group-hover:bg-white group-hover:border-white
+        group-active:bg-white group-active:border-white
       ">
 
         {/* Wrapper for icons */}
@@ -52,6 +54,7 @@ const ContactUsButton = () => {
               absolute w-4 h-4 
               transition-transform transition-opacity duration-300 ease-in-out
               group-hover:translate-x-[150%] group-hover:opacity-0
+              group-active:translate-x-[150%] group-active:opacity-0
             "
           />
           <ArrowRight 
@@ -60,6 +63,7 @@ const ContactUsButton = () => {
               transition-transform transition-opacity duration-300 ease-in-out delay-100
               translate-x-[-150%] opacity-0
               group-hover:translate-x-0 group-hover:opacity-100
+              group-active:translate-x-0 group-active:opacity-100
             "
           />
         </span>

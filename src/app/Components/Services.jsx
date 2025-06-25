@@ -25,33 +25,45 @@ export default function Services() {
                 ${index !== 0 ? '-mt-4 sm:-mt-5 md:-mt-7' : ''}`}
             >
               <div
-                className="flex justify-between items-center w-full p-6 md:p-8 text-left min-h-[120px] sm:min-h-[150px] md:min-h-[180px] cursor-pointer"
+                className="grid grid-cols-12 items-start w-full p-6 md:p-8 min-h-[120px] sm:min-h-[150px] md:min-h-[180px] cursor-pointer"
                 onClick={() => toggleCard(index)}
               >
-                <div className="flex flex-col text-left">
-                  <div className="text-xs sm:text-sm md:text-xs uppercase tracking-wider mb-1 sm:mb-2">
-                    Service {index + 1}
-                  </div>
-                  <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium">
+                {/* First Column - CAPABILITIES / (wider column) */}
+                <div className="col-span-12 md:col-span-4 text-xs sm:text-sm md:text-xs uppercase tracking-wider">
+                  SERVICES /
+                </div>
+
+                {/* Second Column - Service Title - moved below on mobile */}
+                <div className="col-span-10 md:col-span-7 lg:ml-58 md:ml-0 text-start mt-2 md:mt-0">
+                  <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium uppercase">
                     {item.title}
                   </div>
-                </div>
-                <div
-                  className={`flex-shrink-0 flex justify-center items-center border border-black rounded-full transition duration-300 
-                    ${isActive ? "bg-black text-white" : "bg-white text-black"}
-                    w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10`}
-                >
-                  {isActive ? (
-                    <Minus className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
-                  ) : (
-                    <Plus className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+                  {item.subtitle && (
+                    <div className="text-xs sm:text-sm md:text-xs uppercase tracking-wider mt-2">
+                      INCLUDING: {item.subtitle}
+                    </div>
                   )}
+                </div>
+
+                {/* Third Column - Plus/Minus Icon (right-aligned) */}
+                <div className="col-span-2 md:col-span-1 flex justify-end">
+                  <div
+                    className={`flex justify-center items-center border border-black rounded-full transition duration-300 
+                      ${isActive ? " text-black" : "bg-white text-black"}
+                      w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10`}
+                  >
+                    {isActive ? (
+                      <Minus className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+                    ) : (
+                      <Plus className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+                    )}
+                  </div>
                 </div>
               </div>
 
               {!isActive && (
                 <div className="px-6 md:px-8 pb-4 md:pb-6 hidden md:group-hover:block">
-                  <p className="text-base sm:text-lg md:text-xl leading-relaxed">
+                  <p className="text-base sm:text-lg md:text-xl leading-relaxed line-clamp-2">
                     {item.content[0].description}
                   </p>
                 </div>
@@ -64,7 +76,7 @@ export default function Services() {
                       <ul className="space-y-4 sm:space-y-6 md:space-y-8">
                         {item.content.map((service, idx) => (
                           <li key={idx} className="mb-4 sm:mb-6 md:mb-8">
-                            <h4 className="text-lg sm:text-xl md:text-2xl font-bold mb-1 sm:mb-2">
+                            <h4 className="text-base  md:text-lg mb-1 sm:mb-2 uppercase">
                               {service.title}
                             </h4>
                           </li>
@@ -76,7 +88,7 @@ export default function Services() {
                       <div className="space-y-4 sm:space-y-6 md:space-y-8">
                         {item.content.map((service, idx) => (
                           <div key={idx} className="mb-4 sm:mb-6 md:mb-8">
-                            <p className="text-base sm:text-lg md:text-xl leading-relaxed">
+                            <p className="text-base sm:text-lg md:text-xl font-semibold leading-relaxed">
                               {service.description}
                             </p>
                           </div>
@@ -89,8 +101,8 @@ export default function Services() {
                     </div>
                   </div>
 
-                  {/* Case Study Cards Grid */}
-                  <div className="mt-8 sm:mt-10 md:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {/* Case Study Cards Grid - Added left margin on large screens */}
+                  <div className="mt-8 sm:mt-10 md:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ml-0 lg:ml-[25%]">
                     {item.caseStudies.map((card, idx) => (
                       <ServicesCard
                         key={idx}

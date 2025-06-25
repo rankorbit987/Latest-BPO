@@ -2,10 +2,10 @@ import ContactUsButton from "@/app/UI/Buttons/contactusBtn";
 
 const servicesData = [
   {
-    title: "Automation AI Solutions",
+    title: "AI Automation Solutions",
     content: [
       {
-        title: "Automation AI Solutions",
+        title: "AI Automation Solutions",
         description: "Automation is not just about speeding up tasks. We create real conversations that help your customers instantly. Our AI understands, responds, and interacts with your customers across voice and chat channels, providing natural and smooth conversations without delays. From instant call handling to 24/7 chatbot support, our automation ensures faster service, happier customers, and scalable operations."
       },
       {
