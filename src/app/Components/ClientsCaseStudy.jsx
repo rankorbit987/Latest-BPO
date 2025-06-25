@@ -19,7 +19,10 @@ export default function ClientCaseStudies() {
       <div className="grid grid-cols-1 md:grid-cols-7 gap-4 sm:gap-5 md:gap-6 lg:gap-8 w-full">
 
         {/* Case 1 – Customer Support */}
-        <div className="relative rounded-xl overflow-hidden text-white flex flex-col justify-between p-4 md:p-6 min-h-[220px] md:min-h-[300px] lg:min-h-[320px] md:col-span-4 group transition-all duration-500 ease-in-out cursor-pointer">
+        <div className="relative rounded-xl overflow-hidden text-white flex flex-col justify-between p-5 sm:p-6 md:p-6 min-h-[240px] md:min-h-[300px] lg:min-h-[380px] xl:min-h-[400px] md:col-span-4 group transition-all duration-500 ease-in-out cursor-pointer">
+          {/* Inner top-right curve */}
+          <div className="inner-top-right" />
+
           <div className="absolute inset-0 z-0">
             <Image
               src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
@@ -31,11 +34,11 @@ export default function ClientCaseStudies() {
             <div className="absolute inset-0 bg-blue-900/80"></div>
           </div>
 
-          <p className="text-base sm:text-lg lg:text-2xl font-light leading-relaxed relative z-10">
+          <p className="text-sm sm:text-base md:text-lg lg:text-2xl font-light md:pt-0 pt-10 leading-relaxed relative z-10">
             "BPO Brigade transformed our customer support. Customers now get help much faster."
           </p>
           <div className="flex justify-between items-end mt-3 relative z-10">
-            <span className="text-xs md:text-sm font-semibold uppercase tracking-wider">
+            <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">
               National Retailer
             </span>
             <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white transition-all duration-300">
@@ -45,23 +48,26 @@ export default function ClientCaseStudies() {
         </div>
 
         {/* Statistic 1 – Customer Support Metrics */}
-        <div className="relative rounded-xl overflow-hidden flex flex-col justify-between p-4 md:p-6 min-h-[220px] md:min-h-[300px] md:col-span-3 bg-[#78F4B9]">
+        <div className="relative rounded-xl overflow-hidden flex flex-col justify-between p-5 sm:p-6 md:p-6 min-h-[240px] md:min-h-[300px] lg:min-h-[380px] xl:min-h-[400px] md:col-span-3 bg-[#78F4B9]">
           <p className="text-3xl lg:text-5xl font-bold text-black">85%</p>
-          <p className="text-sm md:text-lg font-medium text-black mt-2">
+          <p className="text-sm sm:text-base md:text-lg font-medium text-black mt-2">
             Same-day resolution for 85% of customer issues
           </p>
         </div>
 
         {/* Statistic 2 – Back Office Metrics */}
-        <div className="relative rounded-xl overflow-hidden flex flex-col justify-between p-4 md:p-6 min-h-[220px] md:min-h-[300px] md:col-span-3 bg-[#F6D500]">
+        <div className="relative rounded-xl overflow-hidden flex flex-col justify-between p-5 sm:p-6 md:p-6 min-h-[240px] md:min-h-[300px] lg:min-h-[380px] xl:min-h-[400px] md:col-span-3 bg-[#F6D500]">
           <p className="text-3xl lg:text-5xl font-bold text-black">300+</p>
-          <p className="text-sm md:text-lg font-medium text-black mt-2">
+          <p className="text-sm sm:text-base md:text-lg font-medium text-black mt-2">
             Hours saved monthly with back-office automation
           </p>
         </div>
 
         {/* Case 2 – Back Office Automation */}
-        <div className="relative rounded-xl overflow-hidden text-white flex flex-col justify-between p-4 md:p-6 min-h-[220px] md:min-h-[300px] lg:min-h-[320px] md:col-span-4 group transition-all duration-500 ease-in-out cursor-pointer">
+        <div className="relative rounded-xl overflow-hidden text-white flex flex-col justify-between text-end p-5 sm:p-6 md:p-6 min-h-[240px] md:min-h-[300px] lg:min-h-[380px] xl:min-h-[400px] md:col-span-4 group transition-all duration-500 ease-in-out cursor-pointer">
+          {/* Inner top-left curve */}
+          <div className="inner-top-left" />
+
           <div className="absolute inset-0 z-0">
             <Image
               src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
@@ -71,11 +77,11 @@ export default function ClientCaseStudies() {
             />
             <div className="absolute inset-0 bg-blue-900/80"></div>
           </div>
-          <p className="text-base sm:text-lg lg:text-2xl font-light leading-relaxed relative z-10">
-            "BPO Brigade rebuilt our back-office — faster operations, fewer errors, big savings."
+          <p className="text-sm sm:text-base md:text-lg lg:text-2xl font-light leading-relaxed lg:pr-10 pr-0 pt-10 md:pt-0 relative z-10">
+            "BPO Brigade rebuilt our back-office, faster operations, fewer errors, big savings."
           </p>
           <div className="flex justify-between items-end mt-3 relative z-10">
-            <span className="text-xs md:text-sm font-semibold uppercase tracking-wider">
+            <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">
               Financial Services Provider
             </span>
             <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white transition-all duration-300">
@@ -85,6 +91,33 @@ export default function ClientCaseStudies() {
         </div>
 
       </div>
+
+      {/* Inline Styles for Inner Corners */}
+      <style jsx>{`
+        .inner-top-right {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 90px;
+          height: 50px;
+          background: white;
+          border-bottom-left-radius: 15px;
+          z-index: 30;
+        }
+
+        .inner-top-left {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 90px;
+          height: 50px;
+          background: white;
+          border-bottom-right-radius: 15px;
+          z-index: 30;
+        }
+      `}</style>
     </div>
   );
 }

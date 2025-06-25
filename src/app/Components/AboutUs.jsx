@@ -23,7 +23,7 @@ export default function AboutUs() {
         <div className="border-t-3 border-black mb-8 sm:mb-10 md:mb-12"></div>
 
         <h2 className=" font-medium text-xl md:text-2xl lg:text-3xl mb-8 sm:mb-10 text-left">
-          Our Growth and Values
+          Progress
         </h2>
 
         {/* Value 1 - Integrity */}
