@@ -31,7 +31,7 @@ export default function AboutUs() {
           <div className="md:w-1/4 flex justify-between items-start">
             <ShieldCheck className="w-20 h-20 text-[#1D4ED8]" />
           </div>
-          <div className="md:w-3/4 text-base sm:text-lg leading-relaxed">
+          <div className="md:w-3/4 text-base sm:text-lg leading-relaxed font-semibold">
             <p>
               Today, we serve clients across industries including technology,
               retail, finance, and more. Yet, we remain true to our core values:
@@ -46,7 +46,7 @@ export default function AboutUs() {
           <div className="md:w-1/4 flex justify-between items-start">
             <Users className="w-20 h-20 text-[#10B981]" />
           </div>
-          <div className="md:w-3/4 text-base sm:text-lg leading-relaxed">
+          <div className="md:w-3/4 text-base sm:text-lg leading-relaxed font-semibold">
             <p>
               We invest deeply in people. Our teams receive ongoing training in
               empathy and problem-solving. We promote from within, encourage
@@ -60,7 +60,7 @@ export default function AboutUs() {
           <div className="md:w-1/4 flex justify-between items-start">
             <Bot className="w-20 h-20 text-[#F59E0B]" />
           </div>
-          <div className="md:w-3/4 text-base sm:text-lg leading-relaxed">
+          <div className="md:w-3/4 text-base sm:text-lg leading-relaxed font-semibold">
             <p>
               We embrace technology to make work smoother. By automating routine
               tasks, customizing scripts, and using real-time dashboards, we
@@ -75,7 +75,7 @@ export default function AboutUs() {
           <div className="md:w-1/4 flex justify-between items-start">
             <TrendingUp className="w-20 h-20 text-[#EF4444]" />
           </div>
-          <div className="md:w-3/4 text-base sm:text-lg leading-relaxed">
+          <div className="md:w-3/4 text-base sm:text-lg leading-relaxed font-semibold">
             <p>
               One retail client faced soaring support calls. We stepped in,
               restructured workflows, reduced hold times by 40% within three
@@ -86,7 +86,7 @@ export default function AboutUs() {
         </div>
 
         {/* Closing statement */}
-        <div className="mt-10 text-base sm:text-lg leading-relaxed">
+        <div className="mt-10 text-base sm:text-lg leading-relaxed font-medium">
           <p>
             That is who we are. We listen first, act with care, and always
             deliver. With BPO Brigade, you gain dependable support, clear

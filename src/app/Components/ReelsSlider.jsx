@@ -111,10 +111,10 @@ export default function MusicSlider() {
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="mb-0 text-center">
-        <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-black">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-medium text-black">
           Content Created By Team
         </h1>
-        <p className="text-lg md:text-xl text-black">Watch our Latest Content</p>
+        <p className="text-lg md:text-xl text-black font-semibold mt-4">Watch our Latest Content</p>
       </div>
 
       <div className="relative flex justify-center items-center h-[700px] w-full overflow-hidden">

@@ -27,7 +27,7 @@ const faqData = [
     answer: "Yes. Our Conversational AI can handle most of the routine questions accurately.",
   },
   {
-    question: "What’s the difference between Virtual Assistants and Customer Support?",
+    question: "What's the difference between Virtual Assistants and Customer Support?",
     answer: "Virtual Assistants help your internal team with admin work. Customer Support helps your customers directly through calls, emails, or chat.",
   },
   {
@@ -35,7 +35,6 @@ const faqData = [
     answer: "Yes. We follow strict security standards and data privacy laws. Your data stays safe and confidential.",
   },
 ];
-
 
 export default function FaqSection() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -46,17 +45,14 @@ export default function FaqSection() {
 
   return (
     <div className="mx-auto px-4 sm:px-12 lg:px-20 py-12 md:py-20 bg-white text-black" id="faq-section">
-      {/* Heading */}
-      
-
       <div className="flex flex-col md:flex-row gap-12">
         {/* Left side small heading */}
         <div className="flex flex-col text-left basis-1/2">
-          <p className="inline-block font-semibold text-primary mb-4">
+          <p className="inline-block font-medium text-primary mb-4">
             FAQs
           </p>
-          <p className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-base-content text-[#284d8a]">
-            Your Common Questions Answered
+          <p className="text-2xl md:text-3xl lg:text-4xl font-medium text-base-content text-black">
+            Your Common Questions <br /> Answered
           </p>
         </div>
 
@@ -65,11 +61,11 @@ export default function FaqSection() {
           {faqData.map((faq, index) => (
             <li key={index}>
               <button
-                className="relative flex gap-2 items-center w-full py-5 text-base font-medium text-left border-t md:text-lg border-base-content/10"
+                className="relative flex gap-2 items-center w-full py-5 text-base text-left border-t border-gray-400 md:text-lg border-base-content/10"
                 aria-expanded={activeIndex === index ? "true" : "false"}
                 onClick={() => toggleFAQ(index)}
               >
-                <span className="flex-1 text-base-content">{faq.question}</span>
+                <span className="flex-1 text-base md:text-lg font-semibold text-black">{faq.question}</span>
                 <svg
                   className={`flex-shrink-0 w-4 h-4 ml-auto fill-current transition-transform duration-200 ${
                     activeIndex === index ? "rotate-45" : ""
@@ -93,7 +89,7 @@ export default function FaqSection() {
                 }`}
               >
                 <div className="pb-5 leading-relaxed">
-                  <div className="space-y-2 leading-relaxed">
+                  <div className="space-y-2 leading-relaxed font-medium">
                     {faq.answer}
                   </div>
                 </div>

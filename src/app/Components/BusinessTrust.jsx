@@ -83,7 +83,7 @@ export default function BusinessTrust() {
             <div className="h-px bg-gray-200 mb-6"></div>
             <h2 className="text-2xl md:text-3xl font-medium text-black mb-4">Real World Experience That Delivers</h2>
             
-            <p className="text-base md:text-lg text-gray-800 font-semibold">
+            <p className="text-base md:text-lg text-black font-semibold">
               Our team brings deep industry knowledge from years of hands-on leadership roles.
               We understand your challenges because we have faced them ourselves.
               From planning to execution, the same people guide your project every step of the way.
@@ -98,7 +98,7 @@ export default function BusinessTrust() {
             <div className="h-px bg-gray-200 mb-6"></div>
             <h2 className="text-2xl md:text-3xl font-medium text-black mb-4">Tireless Commitment To Your Success</h2>
             
-            <p className="text-base md:text-lg text-gray-800 font-semibold">
+            <p className="text-base md:text-lg text-black font-semibold">
               Tireless commitment defines how we work every day. We act like an extension of your team.
               Our support remains steady, reliable, and fully invested in your outcomes.
               Whether handling customer calls or streamlining operations, we stay focused on making your business stronger.
@@ -112,7 +112,7 @@ export default function BusinessTrust() {
             <div className="h-px bg-gray-200 mb-6"></div>
             <h2 className="text-2xl md:text-3xl font-medium text-black mb-4">Innovative Solutions Powered By AI And People</h2>
             
-            <p className="text-base md:text-lg text-gray-800 font-semibold">
+            <p className="text-base md:text-lg text-black font-semibold">
               We combine advanced AI with trained human expertise to deliver efficient solutions.
               Our automation handles tasks quickly, while our agents bring empathy where it matters most.
               As your needs grow, our scalable services keep pace, ensuring smooth operations every day.

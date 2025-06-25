@@ -68,11 +68,11 @@ export default function ContactUs() {
     >
       {/* Left Content */}
       <div className="flex flex-col justify-center space-y-8 text-black">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-semibold leading-tight text-[#284d8a]">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-medium leading-tight text-black">
           Your Success Starts Here <br className="hidden md:inline" /> Contact Us
         </h1>
 
-        <p className="text-base md:text-lg">
+        <p className="text-base md:text-lg font-semibold">
           We're ready to listen and help. Reach out today to discuss your needs.
           Contact us anytime to explore how BPO Brigade can simplify your
           workload and support your business growth.
@@ -95,8 +95,8 @@ export default function ContactUs() {
         </div>
 
         <div>
-          <h4 className="font-semibold">Lahore Office</h4>
-          <p className="text-sm mt-1 leading-relaxed">
+          <h4 className="font-medium">Lahore Office</h4>
+          <p className="text-sm mt-1 leading-relaxed font-semibold">
             90 Johar, Block D2 Block D 2 Phase 1 Town,<br /> Lahore, 54782
           </p>
         </div>

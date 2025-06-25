@@ -50,7 +50,7 @@ export default function ClientCaseStudies() {
         {/* Statistic 1 – Customer Support Metrics */}
         <div className="relative rounded-xl overflow-hidden flex flex-col justify-between p-5 sm:p-6 md:p-6 min-h-[240px] md:min-h-[300px] lg:min-h-[380px] xl:min-h-[400px] md:col-span-3 bg-[#78F4B9]">
           <p className="text-3xl lg:text-5xl font-bold text-black">85%</p>
-          <p className="text-sm sm:text-base md:text-lg font-medium text-black mt-2">
+          <p className="text-sm sm:text-base md:text-lg font-semibold text-black mt-2">
             Same-day resolution for 85% of customer issues
           </p>
         </div>
@@ -58,7 +58,7 @@ export default function ClientCaseStudies() {
         {/* Statistic 2 – Back Office Metrics */}
         <div className="relative rounded-xl overflow-hidden flex flex-col justify-between p-5 sm:p-6 md:p-6 min-h-[240px] md:min-h-[300px] lg:min-h-[380px] xl:min-h-[400px] md:col-span-3 bg-[#F6D500]">
           <p className="text-3xl lg:text-5xl font-bold text-black">300+</p>
-          <p className="text-sm sm:text-base md:text-lg font-medium text-black mt-2">
+          <p className="text-sm sm:text-base md:text-lg font-semibold text-black mt-2">
             Hours saved monthly with back-office automation
           </p>
         </div>
