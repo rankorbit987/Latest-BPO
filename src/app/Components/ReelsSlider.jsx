@@ -106,7 +106,7 @@ export default function MusicSlider() {
 
   return (
     <div 
-      className="flex flex-col justify-center items-center bg-[#c394f8] relative pt-10"
+      className="flex flex-col justify-center items-center bg-[#c394f8] relative pt-10 "
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

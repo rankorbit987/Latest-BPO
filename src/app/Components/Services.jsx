@@ -12,14 +12,14 @@ export default function Services() {
   };
 
   return (
-    <section id="services-section" className="w-full py-12 md:py-20 text-black bg-white">
+    <section id="services-section" className="w-full py-12 md:py-20  text-black bg-white">
       <div className="relative w-full max-w-full">
         {servicesData.map((item, index) => {
           const isActive = activeCard === index;
           return (
             <div
               key={index}
-              className={`relative border-t-[3px] border-black rounded-t-[30px] rounded-b-none transition-all duration-300 group 
+              className={`px-4 sm:px-6 lg:px-12 relative border-t-[3px] border-black rounded-t-[30px] rounded-b-none transition-all duration-300 group 
                 ${isActive ? "bg-white" : "bg-white"} 
                 ${!isActive ? item.hoverColor : ""}
                 ${index !== 0 ? '-mt-4 sm:-mt-5 md:-mt-7' : ''}`}
@@ -33,7 +33,7 @@ export default function Services() {
                   SERVICES /
                 </div>
 
-                <div className="col-span-10 md:col-span-7 lg:ml-58 md:ml-0 text-start mt-2 md:mt-0">
+                <div className="col-span-10 md:col-span-7 lg:ml-54 md:ml-0 text-start mt-2 md:mt-0">
                   <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium uppercase">
                     {item.title}
                   </div>

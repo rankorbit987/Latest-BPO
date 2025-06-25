@@ -19,7 +19,7 @@ const Navbar = () => {
     }`;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white px-[20px] lg:px-20 py-2">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white px-4 sm:px-8 lg:px-20 py-2">
       <div className="flex justify-between items-center w-full">
         <a href="/" className="flex items-center">
           <Image 
