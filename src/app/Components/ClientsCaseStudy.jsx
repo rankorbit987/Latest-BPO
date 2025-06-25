@@ -8,7 +8,7 @@ import Image from "next/image";
 export default function ClientCaseStudies() {
   return (
     <div className="px-4 sm:px-6 md:px-8 lg:px-20 py-10 md:py-14 flex flex-col items-start mx-auto bg-white">
-      <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight mb-8 text-[#284d8a]">
+      <h1 className="text-2xl md:text-3xl lg:text-4xl font-medium text-black leading-tight mb-10">
         Real Results. Real Businesses. Real Growth.
       </h1>
 

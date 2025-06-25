@@ -146,6 +146,11 @@ export default function Services() {
             </div>
           );
         })}
+        
+        {/* Decorative bottom card */}
+        <div className={`relative border-t-[3px] border-black rounded-t-[30px] rounded-b-none bg-white -mt-4 sm:-mt-5 md:-mt-7`}>
+          <div className="min-h-[30px]"></div>
+        </div>
       </div>
     </section>
   );
