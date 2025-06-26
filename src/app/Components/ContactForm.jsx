@@ -83,22 +83,33 @@ export default function ContactUs() {
         </div>
 
         <div>
-          <h4 className="text-sm font-medium">Call us</h4>
-          <p className="text-lg font-semibold mt-1">01793 488 000</p>
+          <h4 className="text-sm font-semibold text-gray-400">Call us</h4>
+          <p className="text-lg md:text-xl font-medium mt-1">01793 488 000</p>
         </div>
 
         <div>
-          <h4 className="text-sm font-medium">Email us</h4>
-          <p className="text-lg font-semibold mt-1">
+          <h4 className="text-sm font-semibold text-gray-400">Email us</h4>
+          <p className="text-lg md:text-xl font-medium mt-1">
             hello@leadingresolutions.com
           </p>
         </div>
 
         <div>
-          <h4 className="font-medium">Lahore Office</h4>
-          <p className="text-sm mt-1 leading-relaxed font-semibold">
+          <h4 className="text-sm font-semibold text-gray-400">Lahore Office</h4>
+          <p className="text-lg md:text-xl mt-1 leading-relaxed font-medium">
             90 Johar, Block D2 Block D 2 Phase 1 Town,<br /> Lahore, 54782
           </p>
+          <div className="relative mt-4 w-full sm:w-72 h-40 sm:h-44 overflow-hidden rounded-2xl border border-gray-300">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27221.30370572093!2d74.25073347375427!3d31.455773761267188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190115b05a98c3%3A0xd62437d60099e089!2sBPO%20Brigade!5e0!3m2!1sen!2s!4v1719174940000!5m2!1sen!2s"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
       </div>
 

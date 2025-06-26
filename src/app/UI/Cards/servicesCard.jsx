@@ -7,9 +7,9 @@ const ServicesCard = ({ image, label, title }) => {
   return (
     <div className="bg-white rounded-xl overflow-hidden border border-gray-300 cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-full group/card">
       <div className="flex md:flex-row flex-col h-full">
-        <div className="relative md:w-2/5 w-full h-60 md:h-full">
+        <div className="relative md:w-3/5 w-full h-30 md:h-full">
           <Image 
-            src={image} 
+            src={image}
             alt={title} 
             fill
             className="object-cover"
@@ -23,7 +23,7 @@ const ServicesCard = ({ image, label, title }) => {
           <h4 className="text-lg md:text-xl lg:text-2xl mb-4 md:mb-6">{title}</h4>
           <div className="flex justify-end">
             <div className="transition-all duration-300 rounded-full p-2 border border-black md:border-none group-hover/card:bg-black">
-              <ArrowRight size={24} className="md:size-8 transition-colors duration-300 group-hover/card:text-white text-black" />
+              <ArrowRight size={24} className="md:size-6 size-4 transition-colors duration-300 group-hover/card:text-white text-black" />
             </div>
           </div>
         </div>

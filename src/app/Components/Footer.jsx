@@ -40,29 +40,31 @@ const Footer = () => {
             <br />
             <span className="font-medium">friendly team members</span>
             <br />
-            Let’s do something brilliant together.
+            Let's do something brilliant together.
           </h2>
           <div className="mt-6 sm:mt-8">
             <GetInTouchButton />
           </div>
         </div>
 
-        {/* Location Section replacing Careers */}
+        {/* Team Section */}
         <div className="flex flex-col items-start text-left w-full sm:w-auto">
-          <div className="relative w-full sm:w-72 h-40 sm:h-44 overflow-hidden rounded-2xl border border-gray-300">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27221.30370572093!2d74.25073347375427!3d31.455773761267188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190115b05a98c3%3A0xd62437d60099e089!2sBPO%20Brigade!5e0!3m2!1sen!2s!4v1719174940000!5m2!1sen!2s"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+          <div className="relative w-full sm:w-72 h-40 sm:h-44 overflow-hidden rounded-2xl">
+            {/* Single team image covering entire card */}
+            <img
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+              alt="Our team"
+              className="w-full h-full object-cover"
+            />
+            {/* Online status badge */}
+            <div className="absolute bottom-4 left-4 bg-black bg-opacity-70 px-3 py-1 rounded-full flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-green-500"></span>
+              <span className="text-xs text-white">Team online</span>
+            </div>
           </div>
-          <h3 className="text-lg font-semibold mt-4">Our Location</h3>
+          <h3 className="text-lg font-semibold mt-4">Our Team</h3>
           <p className="mt-1 max-w-xs text-sm text-gray-300">
-            90 Johar, Block D2 Block D 2 Phase 1 Town, Lahore, 54782
+            Meet our dedicated team always ready to assist you.
           </p>
         </div>
       </div>
@@ -72,10 +74,34 @@ const Footer = () => {
 
       {/* Bottom Row */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 sm:gap-4 overflow-hidden">
-        <div className="flex flex-wrap gap-4 sm:gap-6 text-gray-400 text-xs sm:text-sm">
-          <a href="#about-us" className="hover:text-white transition">About us</a>
-          <a href="#services-section" className="hover:text-white transition">Services</a>
-          <a href="#faq-section" className="hover:text-white transition">FAQ</a>
+        <div className="flex flex-wrap gap-4 sm:gap-6 text-white text-xs sm:text-sm">
+          {[
+            { label: "About us", href: "#about-us" },
+            { label: "Services", href: "#services-section" },
+            { label: "FAQ", href: "#faq-section" },
+          ].map((item, index) => (
+            <a 
+              key={index}
+              href={item.href}
+              className="
+                relative 
+                transition-all 
+                hover:text-white
+                after:content-[''] 
+                after:absolute 
+                after:w-0 
+                after:h-px 
+                after:bottom-0 
+                after:left-0 
+                after:bg-white 
+                after:transition-all 
+                after:duration-300
+                hover:after:w-full
+              "
+            >
+              {item.label}
+            </a>
+          ))}
         </div>
 
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">

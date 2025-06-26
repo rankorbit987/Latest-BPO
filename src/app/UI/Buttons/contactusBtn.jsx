@@ -69,7 +69,7 @@ const ContactUsButton = () => {
         </span>
 
       </span>
-      <span className="mr-3 md:text-lg text-base font-normal">Contact Us</span>
+      <span className="mr-3 md:text-lg text-base font-medium">Contact Us</span>
     </button>
   );
 };

@@ -65,7 +65,7 @@ export default function FaqSection() {
                 aria-expanded={activeIndex === index ? "true" : "false"}
                 onClick={() => toggleFAQ(index)}
               >
-                <span className="flex-1 text-base md:text-lg font-semibold text-black">{faq.question}</span>
+                <span className="flex-1 text-base md:text-lg font-medium text-black">{faq.question}</span>
                 <svg
                   className={`flex-shrink-0 w-4 h-4 ml-auto fill-current transition-transform duration-200 ${
                     activeIndex === index ? "rotate-45" : ""

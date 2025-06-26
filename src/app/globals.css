@@ -39,3 +39,11 @@ html {
 body {
   -webkit-tap-highlight-color: transparent;
 }
+@layer utilities {
+  .aspect-square {
+    aspect-ratio: 1 / 1;
+  }
+  .aspect-auto {
+    aspect-ratio: auto;
+  }
+}

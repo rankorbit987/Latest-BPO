@@ -12,33 +12,32 @@ export default function Services() {
   };
 
   return (
-    <section id="services-section" className="w-full py-12 md:py-20 text-black bg-white">
-
+    <section id="services-section" className="w-full py-8 md:py-20 text-black bg-white">
       <div className="relative w-full max-w-full">
         {servicesData.map((item, index) => {
           const isActive = activeCard === index;
           return (
             <div
               key={index}
-              className={`px-4 sm:px-6 lg:px-12 relative border-t-[3px] border-black rounded-t-[30px] rounded-b-none transition-all duration-300 group 
+              className={`px-0 sm:px-5 lg:px-12 relative border-t-[3px] border-black rounded-t-[30px] rounded-b-none transition-all duration-300 group -mt-3 sm:-mt-4 md:-mt-7
                 ${isActive ? "bg-white" : "bg-white"} 
                 ${!isActive ? item.hoverColor : ""}`}
             >
-              {/* Header content - stays fixed */}
+              {/* Header content */}
               <div
-                className="grid grid-cols-12 items-start w-full p-6 md:p-8 min-h-[120px] sm:min-h-[150px] md:min-h-[140px] cursor-pointer"
+                className="grid grid-cols-12 items-start w-full p-4 md:p-6 lg:p-8 min-h-[100px] sm:min-h-[120px] md:min-h-[140px] cursor-pointer"
                 onClick={() => toggleCard(index)}
               >
-                <div className="col-span-12 md:col-span-4 text-xs sm:text-sm md:text-xs uppercase tracking-wider">
+                <div className="col-span-12 md:col-span-4 text-xs sm:text-[14px] uppercase tracking-wider font-mono font-medium">
                   SERVICES /
                 </div>
 
-                <div className="col-span-10 md:col-span-7 lg:ml-54 md:ml-0 text-start mt-2 md:mt-0">
-                  <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium uppercase">
+                <div className="col-span-10 md:col-span-7 lg:ml-53 md:ml-0 text-start mt-1 md:mt-0">
+                  <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium">
                     {item.title}
                   </div>
                   {item.subtitle && (
-                    <div className="text-xs sm:text-sm md:text-lg uppercase tracking-wider mt-2">
+                    <div className="text-xs sm:text-sm md:text-lg uppercase tracking-wider mt-1 sm:mt-2">
                       INCLUDING: {item.subtitle}
                     </div>
                   )}
@@ -48,26 +47,26 @@ export default function Services() {
                   <div
                     className={`flex justify-center items-center border border-black rounded-full transition duration-300 
                       ${isActive ? " text-black" : "bg-white text-black"}
-                      w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10`}
+                      w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-10 lg:h-10`}
                   >
                     {isActive ? (
-                      <Minus className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+                      <Minus className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5" />
                     ) : (
-                      <Plus className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+                      <Plus className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5" />
                     )}
                   </div>
                 </div>
               </div>
 
-              {/* Hover content - appears below without shifting header */}
+              {/* Hover content */}
               {!isActive && (
-                <div className="px-6 md:px-8 pb-4 md:pb-6 hidden md:group-hover:block transition-all duration-300">
-                  <div className="flex flex-col md:flex-row gap-4 sm:gap-5 md:gap-6">
+                <div className="px-4 sm:px-5 md:px-6 lg:px-8 pb-3 sm:pb-4 md:pb-6 hidden md:group-hover:block transition-all duration-300">
+                  <div className="flex flex-col md:flex-row gap-3 sm:gap-4 md:gap-6">
                     <div className="w-full md:w-1/2">
-                      <ul className="space-y-2 sm:space-y-3 md:space-y-4">
+                      <ul className="space-y-1 sm:space-y-2 md:space-y-3 lg:space-y-4">
                         {item.content.slice(0, 1).map((service, idx) => (
-                          <li key={idx} className="mb-2 sm:mb-4 md:mb-6">
-                            <h4 className="text-base sm:text-lg mb-1 sm:mb-2 uppercase">
+                          <li key={idx} className="mb-1 sm:mb-2 md:mb-4 lg:mb-6">
+                            <h4 className="text-xs sm:text-[13px] md:text-[14px] uppercase font-mono font-medium">
                               {service.title}
                             </h4>
                           </li>
@@ -76,10 +75,10 @@ export default function Services() {
                     </div>
 
                     <div className="w-full md:w-1/2">
-                      <div className="space-y-2 md:space-y-4">
+                      <div className="space-y-1 sm:space-y-2 md:space-y-3 lg:space-y-4">
                         {item.content.slice(0, 1).map((service, idx) => (
-                          <div key={idx} className="mb-2 sm:mb-4 md:mb-6">
-                            <p className="text-base sm:text-lg md:text-xl font-medium leading-relaxed line-clamp-2">
+                          <div key={idx} className="mb-1 sm:mb-2 md:mb-3 lg:mb-4">
+                            <p className="text-sm sm:text-base font-medium leading-relaxed line-clamp-2">
                               {service.description}
                             </p>
                           </div>
@@ -90,23 +89,18 @@ export default function Services() {
                 </div>
               )}
 
-              {/* Expanded content - smooth animation with scrollable area */}
+              {/* Expanded content */}
               <div 
                 className={`overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] 
-                  ${isActive ? 'max-h-[80vh] opacity-100' : 'max-h-0 opacity-0'}`}
-                style={{
-                  transitionProperty: 'max-height, opacity',
-                  willChange: 'max-height, opacity'
-                }}
+                  ${isActive ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0'}`}
               >
-                <div className="p-6 md:p-8 border-t border-gray-300 overflow-y-auto max-h-[calc(80vh-180px)]">
-                  <div className="flex flex-col md:flex-row gap-4 sm:gap-5 md:gap-6">
-                    {/* Subtitles and Descriptions aligned properly */}
+                <div className="p-4 sm:p-5 md:p-6 lg:p-8 border-t border-gray-300">
+                  <div className="flex flex-col md:flex-row gap-3 sm:gap-4 md:gap-5 lg:gap-6">
                     <div className="w-full md:w-1/2">
-                      <div className="space-y-2 sm:space-y-3 md:space-y-4">
+                      <div className="space-y-1 sm:space-y-2 md:space-y-3 lg:space-y-4">
                         {item.content.map((service, idx) => (
-                          <div key={idx} className="mb-2 sm:mb-4 md:mb-6">
-                            <h4 className="text-base mb-1 sm:mb-2 uppercase font-medium">
+                          <div key={idx} className="mb-1 sm:mb-2">
+                            <h4 className="text-xs sm:text-[13px] md:text-[14px] uppercase font-medium font-mono">
                               {service.title}
                             </h4>
                           </div>
@@ -115,31 +109,34 @@ export default function Services() {
                     </div>
 
                     <div className="w-full md:w-1/2">
-                      <div className="space-y-2 sm:space-y-3 md:space-y-4">
+                      <div className="space-y-1 sm:space-y-2 md:space-y-3 lg:space-y-4">
                         {item.content.map((service, idx) => (
-                          <div key={idx} className="mb-2 sm:mb-4 md:mb-6">
-                            <p className="text-base sm:text-lg font-semibold leading-relaxed">
+                          <div key={idx} className="mb-1 sm:mb-2 md:mb-3 lg:mb-4">
+                            <p className="text-sm sm:text-base md:text-[15px] lg:text-base font-medium leading-relaxed">
                               {service.description}
                             </p>
                           </div>
                         ))}
                       </div>
 
-                      <div className="flex flex-wrap gap-3 sm:gap-4 mt-4 md:mt-6">
+                      <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 mt-3 sm:mt-4 md:mt-5 lg:mt-6">
                         {item.buttons}
                       </div>
                     </div>
                   </div>
 
-                  {/* Case Study Cards Grid */}
-                  <div className="mt-6 sm:mt-8 md:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ml-0 lg:ml-[25%]">
+                  <div className="mt-4 sm:mt-5 md:mt-6 lg:mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 md:gap-6 lg:gap-8 ml-0 lg:ml-[25%]">
                     {item.caseStudies.map((card, idx) => (
-                      <ServicesCard
-                        key={idx}
-                        image={card.image}
-                        label={card.label}
-                        title={card.title}
-                      />
+                      <div key={idx} className="flex flex-col h-full">
+                        <ServicesCard
+                          image={card.image}
+                          label={card.label}
+                          title={card.title}
+                          className="h-full min-h-[250px] sm:min-h-[280px] md:min-h-[320px] lg:min-h-[350px]"
+                          imageContainerClassName="w-1/2"
+                          contentContainerClassName="w-1/2 p-3 sm:p-4 md:p-5 lg:p-6"
+                        />
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -149,8 +146,8 @@ export default function Services() {
         })}
 
         {/* Decorative bottom card */}
-        <div className={`relative border-t-[3px] border-black rounded-t-[30px] rounded-b-none bg-white -mt-4 sm:-mt-5 md:-mt-7`}>
-          <div className="min-h-[30px]"></div>
+        <div className="relative border-t-[3px] border-black rounded-t-[30px] rounded-b-none bg-white -mt-3 sm:-mt-4 md:-mt-5 lg:-mt-7">
+          <div className="min-h-[20px] sm:min-h-[25px] md:min-h-[30px]"></div>
         </div>
       </div>
     </section>
