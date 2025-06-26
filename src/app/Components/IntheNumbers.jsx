@@ -21,16 +21,16 @@ const InTheNumbers = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Card 1 */}
         <div className="bg-[#D3A7FF] rounded-2xl px-6 py-4 flex flex-col h-64">
-          <span className="text-[80px] font-light leading-none">100+</span>
+          <span className="text-[80px] font-medium leading-none">100+</span>
           <div className="flex-grow"></div>
-          <p className="text-lg">Active Client Partnerships (2025)</p>
+          <p className="text-lg font-semibold">Active Client Partnerships (2025)</p>
         </div>
 
         {/* Card 2 */}
         <div className="bg-[#48F4B8] rounded-2xl px-6 py-4 flex flex-col h-64">
           <span className="text-[80px] font-light leading-none">500+</span>
           <div className="flex-grow"></div>
-          <p className="text-lg">Assignments Completed YTD</p>
+          <p className="text-lg font-semibold">Assignments Completed YTD</p>
         </div>
 
         {/* Card 3 */}
@@ -40,7 +40,7 @@ const InTheNumbers = () => {
             <span className="text-3xl font-light">99%</span>
           </div>
           <div className="flex-grow"></div>
-          <p className="text-lg">On-Time Task Completion (2025 - YTD)</p>
+          <p className="text-lg font-semibold">On-Time Task Completion (2025 - YTD)</p>
         </div>
       </div>
     </section>
