@@ -18,7 +18,7 @@ export default function AboutUs() {
         </h1>
       </div>
 
-      <div className="ml-auto max-w-5xl w-full">
+      <div className="ml-auto max-w-4xl w-full">
         {/* Border line */}
         <div className="border-t-3 border-black mb-8 sm:mb-10 md:mb-12"></div>
 
@@ -28,10 +28,10 @@ export default function AboutUs() {
 
         {/* Value 1 - Integrity */}
         <div className="flex flex-col md:flex-row gap-6 sm:gap-8 mb-8 sm:mb-10 items-start">
-          <div className="md:w-1/4 flex justify-between items-start">
+          <div className="md:w-1/4 flex justify-start items-start pt-2">
             <ShieldCheck className="w-20 h-20 text-[#1D4ED8]" />
           </div>
-          <div className="md:w-3/4 text-base sm:text-lg leading-relaxed font-semibold">
+          <div className="md:w-3/4 text-base sm:text-lg md:text-xl leading-relaxed font-medium">
             <p>
               Today, we serve clients across industries including technology,
               retail, finance, and more. Yet, we remain true to our core values:
@@ -43,10 +43,10 @@ export default function AboutUs() {
 
         {/* Value 2 - People Investment */}
         <div className="flex flex-col md:flex-row gap-6 sm:gap-8 mb-8 sm:mb-10 items-start">
-          <div className="md:w-1/4 flex justify-between items-start">
+          <div className="md:w-1/4 flex justify-start items-start pt-2">
             <Users className="w-20 h-20 text-[#10B981]" />
           </div>
-          <div className="md:w-3/4 text-base sm:text-lg leading-relaxed font-semibold">
+          <div className="md:w-3/4 text-base sm:text-lg md:text-xl leading-relaxed font-medium">
             <p>
               We invest deeply in people. Our teams receive ongoing training in
               empathy and problem-solving. We promote from within, encourage
@@ -57,10 +57,10 @@ export default function AboutUs() {
 
         {/* Value 3 - Automation & Tools */}
         <div className="flex flex-col md:flex-row gap-6 sm:gap-8 mb-8 sm:mb-10 items-start">
-          <div className="md:w-1/4 flex justify-between items-start">
+          <div className="md:w-1/4 flex justify-start items-start pt-2">
             <Bot className="w-20 h-20 text-[#F59E0B]" />
           </div>
-          <div className="md:w-3/4 text-base sm:text-lg leading-relaxed font-semibold">
+          <div className="md:w-3/4 text-base sm:text-lg md:text-xl leading-relaxed font-medium">
             <p>
               We embrace technology to make work smoother. By automating routine
               tasks, customizing scripts, and using real-time dashboards, we
@@ -72,10 +72,10 @@ export default function AboutUs() {
 
         {/* Value 4 - Client Success Story */}
         <div className="flex flex-col md:flex-row gap-6 sm:gap-8 items-start">
-          <div className="md:w-1/4 flex justify-between items-start">
+          <div className="md:w-1/4 flex justify-start items-start pt-2">
             <TrendingUp className="w-20 h-20 text-[#EF4444]" />
           </div>
-          <div className="md:w-3/4 text-base sm:text-lg leading-relaxed font-semibold">
+          <div className="md:w-3/4 text-base sm:text-lg md:text-xl leading-relaxed font-medium ">
             <p>
               One retail client faced soaring support calls. We stepped in,
               restructured workflows, reduced hold times by 40% within three
@@ -86,7 +86,7 @@ export default function AboutUs() {
         </div>
 
         {/* Closing statement */}
-        <div className="mt-10 text-base sm:text-lg leading-relaxed font-medium">
+        <div className="mt-10 text-base sm:text-lg md:text-xl leading-relaxed font-medium">
           <p>
             That is who we are. We listen first, act with care, and always
             deliver. With BPO Brigade, you gain dependable support, clear

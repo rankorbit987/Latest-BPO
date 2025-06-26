@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center bg-white px-4 sm:px-6 lg:px-20 py-20 md:py-0">
       <div className="text-left w-full mt-10">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium leading-tight text-black">
+        <h1 className="text-4xl md:text-6xl lg:text-8xl font-medium leading-tight text-black">
           <div className="flex flex-col md:flex-row items-baseline">
             <span className="block">Your</span>
             <div className="block relative md:ml-4">

@@ -13,6 +13,7 @@ export default function Services() {
 
   return (
     <section id="services-section" className="w-full py-12 md:py-20 text-black bg-white">
+
       <div className="relative w-full max-w-full">
         {servicesData.map((item, index) => {
           const isActive = activeCard === index;
@@ -21,8 +22,7 @@ export default function Services() {
               key={index}
               className={`px-4 sm:px-6 lg:px-12 relative border-t-[3px] border-black rounded-t-[30px] rounded-b-none transition-all duration-300 group 
                 ${isActive ? "bg-white" : "bg-white"} 
-                ${!isActive ? item.hoverColor : ""}
-                ${index !== 0 ? '-mt-4 sm:-mt-5 md:-mt-7' : ''}`}
+                ${!isActive ? item.hoverColor : ""}`}
             >
               {/* Header content - stays fixed */}
               <div
@@ -38,7 +38,7 @@ export default function Services() {
                     {item.title}
                   </div>
                   {item.subtitle && (
-                    <div className="text-xs sm:text-sm md:text-xs uppercase tracking-wider mt-2">
+                    <div className="text-xs sm:text-sm md:text-lg uppercase tracking-wider mt-2">
                       INCLUDING: {item.subtitle}
                     </div>
                   )}
@@ -62,12 +62,12 @@ export default function Services() {
               {/* Hover content - appears below without shifting header */}
               {!isActive && (
                 <div className="px-6 md:px-8 pb-4 md:pb-6 hidden md:group-hover:block transition-all duration-300">
-                  <div className="flex flex-col md:flex-row gap-6 md:gap-8">
+                  <div className="flex flex-col md:flex-row gap-4 sm:gap-5 md:gap-6">
                     <div className="w-full md:w-1/2">
-                      <ul className="space-y-4 sm:space-y-6 md:space-y-8">
+                      <ul className="space-y-2 sm:space-y-3 md:space-y-4">
                         {item.content.slice(0, 1).map((service, idx) => (
-                          <li key={idx} className="mb-4 md:mb-8">
-                            <h4 className="text-base md:text-lg mb-1 sm:mb-2 uppercase">
+                          <li key={idx} className="mb-2 sm:mb-4 md:mb-6">
+                            <h4 className="text-base sm:text-lg mb-1 sm:mb-2 uppercase">
                               {service.title}
                             </h4>
                           </li>
@@ -76,10 +76,10 @@ export default function Services() {
                     </div>
 
                     <div className="w-full md:w-1/2">
-                      <div className="space-y-4 md:space-y-8">
+                      <div className="space-y-2 md:space-y-4">
                         {item.content.slice(0, 1).map((service, idx) => (
-                          <div key={idx} className="mb-4 sm:mb-6 md:mb-8">
-                            <p className="text-base sm:text-lg md:text-xl font-semibold leading-relaxed line-clamp-2">
+                          <div key={idx} className="mb-2 sm:mb-4 md:mb-6">
+                            <p className="text-base sm:text-lg md:text-xl font-medium leading-relaxed line-clamp-2">
                               {service.description}
                             </p>
                           </div>
@@ -100,38 +100,39 @@ export default function Services() {
                 }}
               >
                 <div className="p-6 md:p-8 border-t border-gray-300 overflow-y-auto max-h-[calc(80vh-180px)]">
-                  <div className="flex flex-col md:flex-row gap-6 md:gap-8">
+                  <div className="flex flex-col md:flex-row gap-4 sm:gap-5 md:gap-6">
+                    {/* Subtitles and Descriptions aligned properly */}
                     <div className="w-full md:w-1/2">
-                      <ul className="space-y-4 sm:space-y-6 md:space-y-8">
+                      <div className="space-y-2 sm:space-y-3 md:space-y-4">
                         {item.content.map((service, idx) => (
-                          <li key={idx} className="mb-4 sm:mb-6 md:mb-8">
-                            <h4 className="text-base md:text-lg mb-1 sm:mb-2 uppercase">
+                          <div key={idx} className="mb-2 sm:mb-4 md:mb-6">
+                            <h4 className="text-base mb-1 sm:mb-2 uppercase font-medium">
                               {service.title}
                             </h4>
-                          </li>
+                          </div>
                         ))}
-                      </ul>
+                      </div>
                     </div>
 
                     <div className="w-full md:w-1/2">
-                      <div className="space-y-4 sm:space-y-6 md:space-y-8">
+                      <div className="space-y-2 sm:space-y-3 md:space-y-4">
                         {item.content.map((service, idx) => (
-                          <div key={idx} className="mb-4 sm:mb-6 md:mb-8">
-                            <p className="text-base sm:text-lg md:text-xl font-semibold leading-relaxed">
+                          <div key={idx} className="mb-2 sm:mb-4 md:mb-6">
+                            <p className="text-base sm:text-lg font-semibold leading-relaxed">
                               {service.description}
                             </p>
                           </div>
                         ))}
                       </div>
 
-                      <div className="flex flex-wrap gap-3 sm:gap-4 mt-6 md:mt-8">
+                      <div className="flex flex-wrap gap-3 sm:gap-4 mt-4 md:mt-6">
                         {item.buttons}
                       </div>
                     </div>
                   </div>
 
                   {/* Case Study Cards Grid */}
-                  <div className="mt-8 sm:mt-10 md:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ml-0 lg:ml-[25%]">
+                  <div className="mt-6 sm:mt-8 md:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ml-0 lg:ml-[25%]">
                     {item.caseStudies.map((card, idx) => (
                       <ServicesCard
                         key={idx}
@@ -146,7 +147,7 @@ export default function Services() {
             </div>
           );
         })}
-        
+
         {/* Decorative bottom card */}
         <div className={`relative border-t-[3px] border-black rounded-t-[30px] rounded-b-none bg-white -mt-4 sm:-mt-5 md:-mt-7`}>
           <div className="min-h-[30px]"></div>
