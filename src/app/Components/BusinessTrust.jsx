@@ -46,7 +46,7 @@ export default function BusinessTrust() {
   return (
     <div className="mx-auto px-4 sm:px-12 lg:px-20 py-12 md:py-20 bg-white text-black">
       {/* Heading */}
-      <div className="mb-12 md:mb-20 lg:ml-[620px] pl-0">
+      <div className="mb-12 md:mb-20">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium text-black mb-6 md:mb-10 leading-tight">
           Trusted By Businesses Who Need Real Support, Not Just Promises
         </h2>

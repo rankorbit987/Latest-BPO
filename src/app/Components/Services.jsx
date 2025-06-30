@@ -28,7 +28,7 @@ export default function Services() {
                 className="grid grid-cols-12 items-start w-full p-4 md:p-6 lg:p-8 min-h-[100px] sm:min-h-[120px] md:min-h-[140px] cursor-pointer"
                 onClick={() => toggleCard(index)}
               >
-                <div className="col-span-12 md:col-span-4 text-xs sm:text-[14px] uppercase tracking-wider font-mono font-medium">
+                <div className="col-span-12 md:col-span-4 text-xs sm:text-[14px] uppercase tracking-wider font-mono font-medium text-gray-600">
                   SERVICES /
                 </div>
 
@@ -37,7 +37,7 @@ export default function Services() {
                     {item.title}
                   </div>
                   {item.subtitle && (
-                    <div className="text-xs sm:text-sm md:text-lg uppercase tracking-wider mt-1 sm:mt-2">
+                    <div className="text-xs sm:text-sm md:text-lg uppercase tracking-wider mt-1 sm:mt-2 text-gray-600">
                       INCLUDING: {item.subtitle}
                     </div>
                   )}
@@ -66,7 +66,7 @@ export default function Services() {
                       <ul className="space-y-1 sm:space-y-2 md:space-y-3 lg:space-y-4">
                         {item.content.slice(0, 1).map((service, idx) => (
                           <li key={idx} className="mb-1 sm:mb-2 md:mb-4 lg:mb-6">
-                            <h4 className="text-xs sm:text-[13px] md:text-[14px] uppercase font-mono font-medium">
+                            <h4 className="text-xs sm:text-[13px] md:text-[14px] uppercase font-mono font-medium text-gray-600">
                               {service.title}
                             </h4>
                           </li>
@@ -78,7 +78,7 @@ export default function Services() {
                       <div className="space-y-1 sm:space-y-2 md:space-y-3 lg:space-y-4">
                         {item.content.slice(0, 1).map((service, idx) => (
                           <div key={idx} className="mb-1 sm:mb-2 md:mb-3 lg:mb-4">
-                            <p className="text-sm sm:text-base font-medium leading-relaxed line-clamp-2">
+                            <p className="text-sm sm:text-base font-semibold leading-relaxed line-clamp-2">
                               {service.description}
                             </p>
                           </div>
@@ -112,7 +112,7 @@ export default function Services() {
                       <div className="space-y-1 sm:space-y-2 md:space-y-3 lg:space-y-4">
                         {item.content.map((service, idx) => (
                           <div key={idx} className="mb-1 sm:mb-2 md:mb-3 lg:mb-4">
-                            <p className="text-sm sm:text-base md:text-[15px] lg:text-base font-medium leading-relaxed">
+                            <p className="text-sm sm:text-base md:text-[15px] lg:text-base font-semibold leading-relaxed">
                               {service.description}
                             </p>
                           </div>

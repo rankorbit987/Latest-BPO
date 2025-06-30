@@ -39,7 +39,7 @@ const LinkedinButton = () => {
           />
         </span>
       </span>
-      <span className="mr-3 md:text-lg text-base font-medium">Linkedin</span>
+      <span className="mr-3 md:text-lg text-base font-semibold">Linkedin</span>
     </button>
   );
 };

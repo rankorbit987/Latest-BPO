@@ -68,7 +68,7 @@ const GetInTouchBtn = () => {
           />
         </span>
       </span>
-      <span className="mr-3 md:text-lg text-base font-normal">Get In Touch</span>
+      <span className="mr-3 md:text-lg text-base font-semibold">Get In Touch</span>
     </button>
   );
 };
