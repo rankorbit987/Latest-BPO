@@ -75,7 +75,7 @@ export default function BusinessTrust() {
           </div>
         </div>
 
-        <div className="lg:w-1/2 space-y-40">
+        <div className="lg:w-1/2 space-y-20 md:space-y-40">
           <section ref={sectionRefs[0]} className="scroll-mt-24">
             <div className="lg:hidden relative w-full h-[300px] mb-8">
               <Image src="/Images/BusinessTrustImages/frame1.svg" alt="Real Experience" layout="fill" objectFit="contain" />

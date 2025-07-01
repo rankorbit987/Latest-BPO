@@ -189,7 +189,7 @@ export default function ContactUs() {
 
           <button
             type="submit"
-            className="bg-black text-white rounded-md px-6 py-3 hover:bg-white hover:text-black hover:border-2 transition mt-2 cursor-pointer w-full sm:w-auto"
+            className="bg-black text-white rounded-md px-6 py-3 hover:bg-[#284d8a]  transition mt-2 cursor-pointer w-full sm:w-auto"
             disabled={isLoading}
           >
             {isLoading ? "Sending..." : "Send Message"}
