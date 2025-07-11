@@ -18,7 +18,7 @@ const servicesData = [
       }
     ],
     buttons: <ContactUsButton />,
-    hoverColor: "hover:bg-blue-400",
+    hoverColor: "hover:bg-[#d65a5a]",
     activeColor: "bg-blue-400",
     caseStudies: [
       { image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80", label: "SERVICE", title: "Streamlining Customer Support for a National Retailer" },
@@ -48,7 +48,7 @@ const servicesData = [
       }
     ],
     buttons: <ContactUsButton />,
-    hoverColor: "hover:bg-red-400",
+    hoverColor: "hover:bg-[#4f64a1]",
     activeColor: "bg-red-400",
     caseStudies: [
       { image: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80", label: "SERVICE", title: "Multichannel Support Expansion for an E-commerce Platform" },
@@ -77,7 +77,7 @@ const servicesData = [
       }
     ],
     buttons: <ContactUsButton />,
-    hoverColor: "hover:bg-green-400",
+    hoverColor: "hover:bg-[#e07a7a]",
     activeColor: "bg-green-400",
     caseStudies: [
       { image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80", label: "SERVICE", title: "Scalable Data Entry Solution for a Healthcare Network" },
@@ -108,7 +108,7 @@ const servicesData = [
       }
     ],
     buttons: <ContactUsButton />,
-    hoverColor: "hover:bg-yellow-400",
+    hoverColor: "hover:bg-[#6585bb]",
     activeColor: "bg-yellow-400",
     caseStudies: [
       { image: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80", label: "SERVICE", title: "Appointment Setting Success for SaaS Platform Expansion" },
@@ -138,7 +138,7 @@ const servicesData = [
       }
     ],
     buttons: <ContactUsButton />,
-    hoverColor: "hover:bg-purple-400",
+    hoverColor: "hover:bg-[#ec9a9a]",
     activeColor: "bg-purple-400",
     caseStudies: [
       { image: "https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80", label: "SERVICE", title: "Lead Generation Campaign for Tech Startup" },
@@ -165,7 +165,7 @@ const servicesData = [
       }
     ],
     buttons: <ContactUsButton />,
-    hoverColor: "hover:bg-teal-400",
+    hoverColor: "hover:bg-[#8aa6d5]",
     activeColor: "bg-teal-400",
     caseStudies: [
       { image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80", label: "SERVICE", title: "Invoice Processing Overhaul for a Global Manufacturer" },

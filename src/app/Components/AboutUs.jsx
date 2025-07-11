@@ -11,10 +11,10 @@ export default function AboutUs() {
       {/* Intro paragraph */}
       <div className="mb-10 sm:mb-14 md:mb-16">
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-medium text-black leading-tight mb-10 ">
-          At BPO Brigade, we believe every task deserves genuine care. We began
-          small, serving local clients with one clear focus — quality. Through
-          well-defined processes, continuous feedback, and full accountability,
-          we built strong client trust from day one.
+          At BPO Brigade, we approach every task with precision and commitment.
+          Starting small with local clients, our mission was clear, deliver
+          excellence. Through streamlined operations, real-time feedback, and
+          full accountability, we’ve earned enduring client trust from day one.
         </h1>
       </div>
 
@@ -29,7 +29,7 @@ export default function AboutUs() {
         {/* Value 1 - Integrity */}
         <div className="flex flex-col md:flex-row gap-6 sm:gap-8 mb-8 sm:mb-10 items-start">
           <div className="md:w-1/4 flex justify-start items-start pt-2">
-            <ShieldCheck className="w-20 h-20 text-[#1D4ED8]" />
+            <ShieldCheck className="w-20 h-20 text-[#c93c3c]" />
           </div>
           <div className="md:w-3/4 text-base sm:text-lg md:text-xl leading-relaxed font-medium">
             <p>
@@ -44,7 +44,7 @@ export default function AboutUs() {
         {/* Value 2 - People Investment */}
         <div className="flex flex-col md:flex-row gap-6 sm:gap-8 mb-8 sm:mb-10 items-start">
           <div className="md:w-1/4 flex justify-start items-start pt-2">
-            <Users className="w-20 h-20 text-[#10B981]" />
+            <Users className="w-20 h-20 text-[#214585]" />
           </div>
           <div className="md:w-3/4 text-base sm:text-lg md:text-xl leading-relaxed font-medium">
             <p>
@@ -58,7 +58,7 @@ export default function AboutUs() {
         {/* Value 3 - Automation & Tools */}
         <div className="flex flex-col md:flex-row gap-6 sm:gap-8 mb-8 sm:mb-10 items-start">
           <div className="md:w-1/4 flex justify-start items-start pt-2">
-            <Bot className="w-20 h-20 text-[#F59E0B]" />
+            <Bot className="w-20 h-20 text-[#c93c3c]" />
           </div>
           <div className="md:w-3/4 text-base sm:text-lg md:text-xl leading-relaxed font-medium">
             <p>
@@ -73,7 +73,7 @@ export default function AboutUs() {
         {/* Value 4 - Client Success Story */}
         <div className="flex flex-col md:flex-row gap-6 sm:gap-8 items-start">
           <div className="md:w-1/4 flex justify-start items-start pt-2">
-            <TrendingUp className="w-20 h-20 text-[#EF4444]" />
+            <TrendingUp className="w-20 h-20 text-[#214585]" />
           </div>
           <div className="md:w-3/4 text-base sm:text-lg md:text-xl leading-relaxed font-medium ">
             <p>

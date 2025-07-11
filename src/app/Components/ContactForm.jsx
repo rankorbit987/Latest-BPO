@@ -4,6 +4,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { FaLinkedin } from "react-icons/fa6";
 import LinkedinButton from "../UI/Buttons/ContactLinkedinBtn";
 import emailjs from "@emailjs/browser";
+import BlastedBackground from "../UI/CardBackground";
 
 export default function ContactUs() {
   const form = useRef();
@@ -18,27 +19,25 @@ export default function ContactUs() {
         setIsSuccess(false);
       }, 2000);
     }
-    return () => clearTimeout(timer); // Clean up the timer
+    return () => clearTimeout(timer);
   }, [isSuccess]);
 
   const sendEmail = (e) => {
     e.preventDefault();
     setIsLoading(true);
-    setIsError(false); // Reset error state on new submission
+    setIsError(false);
     
-    // Get form data to access the email and phone values
     const formData = new FormData(form.current);
     const from_email = formData.get('email');
     const phone = formData.get('phone');
     const from_name = `${formData.get('first_name')} ${formData.get('last_name')}`;
     
-    // Add these values to the form before sending
     const templateParams = {
       from_name: from_name,
       from_email: from_email,
       phone: phone || 'Not provided',
       message: formData.get('message'),
-      reply_to: from_email // This ensures reply goes to sender's email
+      reply_to: from_email
     };
 
     emailjs
@@ -64,15 +63,16 @@ export default function ContactUs() {
   return (
     <section
       id="contact-form"
-      className="min-h-screen bg-white px-4 sm:px-8 lg:px-20 py-20 grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20"
+      className="relative min-h-screen px-4 sm:px-8 lg:px-20 py-20 grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 overflow-hidden"
     >
+      
       {/* Left Content */}
-      <div className="flex flex-col justify-center space-y-8 text-black">
+      <div className="flex flex-col justify-center space-y-8 text-black z-10">
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-medium leading-tight text-black">
           Your Success Starts Here <br className="hidden md:inline" /> Contact Us
         </h1>
 
-        <p className="text-base md:text-lg font-semibold">
+        <p className="text-base md:text-lg font-normal">
           We're ready to listen and help. Reach out today to discuss your needs.
           Contact us anytime to explore how BPO Brigade can simplify your
           workload and support your business growth.
@@ -82,15 +82,11 @@ export default function ContactUs() {
           <LinkedinButton />
         </div>
 
-        <div>
-          <h4 className="text-sm font-semibold text-gray-400">Call us</h4>
-          <p className="text-lg md:text-xl font-medium mt-1">01793 488 000</p>
-        </div>
 
         <div>
           <h4 className="text-sm font-semibold text-gray-400">Email us</h4>
           <p className="text-lg md:text-xl font-medium mt-1">
-            hello@leadingresolutions.com
+            info@bpobrigade.com
           </p>
         </div>
 
@@ -114,7 +110,9 @@ export default function ContactUs() {
       </div>
 
       {/* Form Card */}
-      <div className="bg-[#cba6ff] p-6 sm:p-8 rounded-2xl shadow-md relative text-black">
+      <div className="z-10 backdrop-blur-sm p-6 sm:p-8 rounded-2xl shadow-lg relative text-black border border-white/20">
+      {/* Background Component */}
+      <BlastedBackground />
         <div className="absolute top-6 right-6 flex -space-x-2">
           <img
             src="https://i.pravatar.cc/40?img=1"
@@ -139,14 +137,14 @@ export default function ContactUs() {
               type="text"
               name="first_name"
               placeholder="First Name*"
-              className="p-3 rounded-md w-full bg-white text-black border border-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black"
+              className="p-3 rounded-md w-full bg-white/90 text-black border border-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black"
               required
             />
             <input
               type="text"
               name="last_name"
               placeholder="Last Name*"
-              className="p-3 rounded-md w-full bg-white text-black border border-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black"
+              className="p-3 rounded-md w-full bg-white/90 text-black border border-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black"
               required
             />
           </div>
@@ -155,7 +153,7 @@ export default function ContactUs() {
             type="email"
             name="email"
             placeholder="Email*"
-            className="p-3 rounded-md w-full bg-white text-black border border-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black"
+            className="p-3 rounded-md w-full bg-white/90 text-black border border-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black"
             required
           />
 
@@ -163,14 +161,14 @@ export default function ContactUs() {
             type="tel"
             name="phone"
             placeholder="Phone number"
-            className="p-3 rounded-md w-full bg-white text-black border border-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black"
+            className="p-3 rounded-md w-full bg-white/90 text-black border border-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black"
           />
 
           <textarea
             name="message"
             placeholder="Comments / Questions..."
             rows="4"
-            className="p-3 rounded-md w-full bg-white text-black border border-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black"
+            className="p-3 rounded-md w-full bg-white/90 text-black border border-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black"
             required
           ></textarea>
 
@@ -189,7 +187,7 @@ export default function ContactUs() {
 
           <button
             type="submit"
-            className="bg-black text-white rounded-md px-6 py-3 hover:bg-[#284d8a]  transition mt-2 cursor-pointer w-full sm:w-auto"
+            className="bg-black text-white rounded-md px-6 py-3 hover:bg-[#284d8a] transition mt-2 cursor-pointer w-full sm:w-auto"
             disabled={isLoading}
           >
             {isLoading ? "Sending..." : "Send Message"}

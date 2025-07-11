@@ -12,12 +12,12 @@ export default function Hero() {
             <div className="block relative md:ml-4">
               <div className="dropping-texts-wrapper">
                 <div className="dropping-texts">
-                  <div className="bg-green-400 px-2 rounded-lg">Caring</div>
-                  <div className="bg-blue-400 px-2 rounded-lg">Flexible</div>
-                  <div className="bg-purple-400 px-2 rounded-lg">Reliable</div>
-                  <div className="bg-yellow-400 px-2 rounded-lg">Efficient</div>
-                  <div className="bg-green-400 px-2 rounded-lg">Scalable</div>
-                  <div className="bg-blue-400 px-2 rounded-lg">Cost-Saving</div>
+                  <div className="bg-[#d65a5a] px-2 rounded-lg">Caring</div>
+                  <div className="bg-[#4f64a1] px-2 rounded-lg">Flexible</div>
+                  <div className="bg-[#e07a7a] px-2 rounded-lg">Reliable</div>
+                  <div className="bg-[#6585bb] px-2 rounded-lg">Efficient</div>
+                  <div className="bg-[#ec9a9a] px-2 rounded-lg">Scalable</div>
+                  <div className="bg-[#8aa6d5] px-2 rounded-lg">Cost-Saving</div>
                 </div>
               </div>
             </div>
