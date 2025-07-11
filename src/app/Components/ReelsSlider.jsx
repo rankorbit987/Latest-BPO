@@ -5,6 +5,7 @@ import BlastedBackground from "../UI/CardBackground";
 export default function ReelsSlider() {
   const [selected, setSelected] = useState(1);
   const [isHovered, setIsHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const intervalRef = useRef(null);
 
   const videos = [
@@ -46,18 +47,26 @@ export default function ReelsSlider() {
     },
   ];
 
+  // Set isMobile on first client render
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize(); // set initial
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   useEffect(() => {
     if (!isHovered) {
       intervalRef.current = setInterval(() => {
-        setSelected(prev => (prev % videos.length) + 1);
+        setSelected((prev) => (prev % videos.length) + 1);
       }, 3000);
     }
     return () => clearInterval(intervalRef.current);
   }, [isHovered, videos.length]);
 
-  const circularIndex = (index) => {
-    return ((index % videos.length) + videos.length) % videos.length;
-  };
+  const circularIndex = (index) => ((index % videos.length) + videos.length) % videos.length;
 
   const visibleIndexes = [
     circularIndex(selected - 3),
@@ -68,17 +77,17 @@ export default function ReelsSlider() {
   ];
 
   const getPosition = (videoIndex) => {
-    const selectedIndex = videos.findIndex(v => v.id === selected);
+    const selectedIndex = videos.findIndex((v) => v.id === selected);
     const diff = (videoIndex - selectedIndex + videos.length) % videos.length;
     return diff > 2 ? diff - videos.length : diff;
   };
 
   const getStyle = (position) => {
-    const baseWidth = window.innerWidth < 768 ? 180 : 280;
-    const baseHeight = window.innerWidth < 768 ? 320 : 500;
-    const translateX = window.innerWidth < 768 ? position * 120 : position * 220;
-    const scale = 1 - Math.abs(position) * (window.innerWidth < 768 ? 0.15 : 0.1);
-    
+    const baseWidth = isMobile ? 180 : 280;
+    const baseHeight = isMobile ? 320 : 500;
+    const translateX = isMobile ? position * 120 : position * 220;
+    const scale = 1 - Math.abs(position) * (isMobile ? 0.15 : 0.1);
+
     const styles = {
       transform: `translateX(${translateX}px) scale(${scale})`,
       zIndex: 5 - Math.abs(position),
@@ -86,13 +95,13 @@ export default function ReelsSlider() {
       width: `${baseWidth}px`,
       height: `${baseHeight}px`,
     };
-    
+
     if (position === 0) {
-      return { 
-        ...styles, 
-        transform: `translateX(${translateX}px) scale(${window.innerWidth < 768 ? 1.1 : 1.2})`, 
-        zIndex: 5, 
-        opacity: 1 
+      return {
+        ...styles,
+        transform: `translateX(${translateX}px) scale(${isMobile ? 1.1 : 1.2})`,
+        zIndex: 5,
+        opacity: 1,
       };
     }
     return styles;
@@ -128,7 +137,7 @@ export default function ReelsSlider() {
               style={{
                 ...style,
                 backgroundColor: position !== 0 ? "rgba(0, 0, 0, 0.25)" : "transparent",
-                borderRadius: "12px sm:rounded-[18px]",
+                borderRadius: "18px",
                 overflow: "hidden",
                 boxShadow: "0 15px 35px rgba(0,0,0,0.2)",
               }}
@@ -141,7 +150,7 @@ export default function ReelsSlider() {
                   src={video.embedUrl}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
-                  className="rounded-lg sm:rounded-xl"
+                  className="rounded-xl"
                   title={`YouTube Short ${video.id}`}
                 />
               ) : (
@@ -164,9 +173,7 @@ export default function ReelsSlider() {
           <button
             key={video.id}
             className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
-              selected === video.id 
-                ? "bg-indigo-600 scale-125" 
-                : "bg-white/80 hover:bg-white"
+              selected === video.id ? "bg-indigo-600 scale-125" : "bg-white/80 hover:bg-white"
             }`}
             onClick={() => setSelected(video.id)}
             aria-label={`Go to video ${video.id}`}
