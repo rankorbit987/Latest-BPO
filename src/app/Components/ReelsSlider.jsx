@@ -74,14 +74,26 @@ export default function ReelsSlider() {
   };
 
   const getStyle = (position) => {
+    const baseWidth = window.innerWidth < 768 ? 180 : 280;
+    const baseHeight = window.innerWidth < 768 ? 320 : 500;
+    const translateX = window.innerWidth < 768 ? position * 120 : position * 220;
+    const scale = 1 - Math.abs(position) * (window.innerWidth < 768 ? 0.15 : 0.1);
+    
     const styles = {
-      transform: `translateX(${position * 220}px) scale(${1 - Math.abs(position) * 0.1})`,
+      transform: `translateX(${translateX}px) scale(${scale})`,
       zIndex: 5 - Math.abs(position),
       opacity: 1 - Math.abs(position) * 0.2,
+      width: `${baseWidth}px`,
+      height: `${baseHeight}px`,
     };
     
     if (position === 0) {
-      return { ...styles, scale: 1.2, zIndex: 5, opacity: 1 };
+      return { 
+        ...styles, 
+        transform: `translateX(${translateX}px) scale(${window.innerWidth < 768 ? 1.1 : 1.2})`, 
+        zIndex: 5, 
+        opacity: 1 
+      };
     }
     return styles;
   };
@@ -95,15 +107,15 @@ export default function ReelsSlider() {
       <BlastedBackground />
 
       <div className="text-center z-10 px-4 max-w-4xl mx-auto">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2">
           Content Created By Team
         </h1>
-        <p className="text-lg md:text-xl text-black font-medium">
+        <p className="text-base sm:text-lg md:text-xl text-black font-medium">
           From Our BPO Floor to Your Screen
         </p>
       </div>
 
-      <div className="relative flex justify-center items-center h-[700px] w-full overflow-hidden z-10 mt-8">
+      <div className="relative flex justify-center items-center h-[400px] sm:h-[500px] md:h-[700px] w-full overflow-hidden z-10 mt-4 sm:mt-8">
         {visibleIndexes.map((videoIndex) => {
           const video = videos[videoIndex];
           const position = getPosition(videoIndex);
@@ -115,10 +127,8 @@ export default function ReelsSlider() {
               className="absolute transition-all duration-500 ease-out cursor-pointer will-change-transform"
               style={{
                 ...style,
-                width: "280px",
-                height: "500px",
                 backgroundColor: position !== 0 ? "rgba(0, 0, 0, 0.25)" : "transparent",
-                borderRadius: "18px",
+                borderRadius: "12px sm:rounded-[18px]",
                 overflow: "hidden",
                 boxShadow: "0 15px 35px rgba(0,0,0,0.2)",
               }}
@@ -131,7 +141,7 @@ export default function ReelsSlider() {
                   src={video.embedUrl}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
-                  className="rounded-xl"
+                  className="rounded-lg sm:rounded-xl"
                   title={`YouTube Short ${video.id}`}
                 />
               ) : (
@@ -149,11 +159,11 @@ export default function ReelsSlider() {
         })}
       </div>
 
-      <div className="absolute bottom-8 flex space-x-3 z-10">
+      <div className="absolute bottom-4 sm:bottom-8 flex space-x-2 sm:space-x-3 z-10">
         {videos.map((video) => (
           <button
             key={video.id}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
               selected === video.id 
                 ? "bg-indigo-600 scale-125" 
                 : "bg-white/80 hover:bg-white"

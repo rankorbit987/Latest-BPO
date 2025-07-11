@@ -4,6 +4,7 @@ import React from "react";
 import { ArrowRight } from "lucide-react";
 import ContactUsButton from "../UI/Buttons/contactusBtn";
 import Image from "next/image";
+import BlastedBackground from "../UI/CardBackground";
 
 export default function ClientCaseStudies() {
   return (
@@ -17,8 +18,7 @@ export default function ClientCaseStudies() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 lg:gap-8 w-full">
-
-        {/* Case 1 – Customer Support (Top-Right Inverted Corner) */}
+        {/* Case 1 – Customer Support */}
         <div className="relative rounded-xl inverted-top-right overflow-hidden text-white flex flex-col justify-between p-5 md:p-6 min-h-[320px] md:min-h-[380px] lg:min-h-[450px] md:col-span-8 group transition-all duration-500 ease-in-out cursor-pointer">
           <div className="absolute inset-0 z-0">
             <Image
@@ -28,9 +28,8 @@ export default function ClientCaseStudies() {
               className="object-cover"
               priority
             />
-            <div className="absolute inset-0 bg-blue-900/80"></div>
+            <div className="absolute inset-0 bg-blue-900/90"></div>
           </div>
-
           <p className="text-2xl md:text-3xl lg:text-5xl text-start font-medium leading-relaxed relative z-10 mr-auto max-w-xl">
             "BPO Brigade transformed our customer support. Customers now get help much faster."
           </p>
@@ -45,26 +44,40 @@ export default function ClientCaseStudies() {
         </div>
 
         {/* Statistic 1 – Customer Support Metrics */}
-        <div className="relative rounded-xl overflow-hidden flex flex-col justify-between p-5 md:p-6 min-h-[230px] md:min-h-[290px] lg:min-h-[350px] md:col-span-4 bg-[#78F4B9]">
-          <p className="text-3xl lg:text-5xl text-black">
-            <span className="text-6xl lg:text-9xl">85</span> %
-          </p>
-          <p className="text-sm md:text-base font-semibold text-black mt-2">
-            Same-day resolution for 85% of customer issues
-          </p>
+        <div className="relative z-0 rounded-xl overflow-hidden flex flex-col justify-between p-5 md:p-6 min-h-[230px] md:min-h-[290px] lg:min-h-[350px] md:col-span-4 text-black">
+          <div className="absolute inset-0 z-0">
+            <BlastedBackground />
+          </div>
+          <div className="relative z-10">
+            <p className="text-3xl lg:text-5xl">
+              <span className="text-6xl lg:text-9xl">85</span> %
+            </p>
+          </div>
+          <div className="relative z-10 mt-auto">
+            <p className="text-sm md:text-base font-semibold">
+              Same-day resolution for 85% of customer issues
+            </p>
+          </div>
         </div>
 
         {/* Statistic 2 – Back Office Metrics */}
-        <div className="relative rounded-xl overflow-hidden flex flex-col justify-between p-5 md:p-6 min-h-[230px] md:min-h-[290px] lg:min-h-[350px] md:col-span-4 bg-[#F6D500]">
-          <p className="text-xl lg:text-2xl text-black">
-            From <span className="text-6xl lg:text-9xl font-bold">7</span> Days
-          </p>
-          <p className="text-sm md:text-base font-semibold text-black mt-2">
-            Hours saved monthly with back-office automation
-          </p>
+        <div className="relative z-0 rounded-xl overflow-hidden flex flex-col justify-between p-5 md:p-6 min-h-[230px] md:min-h-[290px] lg:min-h-[350px] md:col-span-4 text-black">
+          <div className="absolute inset-0 z-0">
+            <BlastedBackground />
+          </div>
+          <div className="relative z-10">
+            <p className="text-xl lg:text-2xl">
+              From <span className="text-6xl lg:text-9xl font-bold">7</span> Days
+            </p>
+          </div>
+          <div className="relative z-10 mt-auto">
+            <p className="text-sm md:text-base font-semibold">
+              Hours saved monthly with back-office automation
+            </p>
+          </div>
         </div>
 
-        {/* Case 2 – Back Office Automation (Top-Left Inverted Corner) */}
+        {/* Case 2 – Back Office Automation */}
         <div className="relative rounded-xl inverted-top-left overflow-hidden text-white flex flex-col justify-between text-end p-5 md:p-6 min-h-[320px] md:min-h-[380px] lg:min-h-[450px] md:col-span-8 group transition-all duration-500 ease-in-out cursor-pointer">
           <div className="absolute inset-0 z-0">
             <Image
@@ -76,9 +89,8 @@ export default function ClientCaseStudies() {
             <div className="absolute inset-0 bg-blue-900/80"></div>
           </div>
           <p className="text-2xl md:text-3xl lg:text-5xl text-end sm:pt-0 pt-15 font-medium leading-relaxed relative z-10 ml-auto max-w-xl">
-  "BPO Brigade rebuilt our back-office, faster operations, fewer errors, big savings."
-</p>
-
+            "BPO Brigade rebuilt our back-office, faster operations, fewer errors, big savings."
+          </p>
           <div className="flex justify-between items-end relative z-10">
             <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider">
               Financial Services Provider
@@ -97,11 +109,9 @@ export default function ClientCaseStudies() {
           --s: 30px;
           --x: 40px;
           --y: 20px;
-
           --_m: /calc(2 * var(--r)) calc(2 * var(--r)) radial-gradient(#000 70%, #0000 72%);
           --_g: conic-gradient(at var(--r) var(--r), #000 75%, #0000 0);
           --_d: calc(var(--s) + var(--r));
-
           mask:
             calc(var(--_d) + var(--x)) 0 var(--_m),
             0 calc(var(--_d) + var(--y)) var(--_m),
@@ -117,11 +127,9 @@ export default function ClientCaseStudies() {
           --s: 30px;
           --x: 40px;
           --y: 20px;
-
           --_m: /calc(2 * var(--r)) calc(2 * var(--r)) radial-gradient(#000 70%, #0000 72%);
           --_g: conic-gradient(at calc(100% - var(--r)) var(--r), #0000 25%, #000 0);
           --_d: calc(var(--s) + var(--r));
-
           mask:
             calc(100% - var(--_d) - var(--x)) 0 var(--_m),
             100% calc(var(--_d) + var(--y)) var(--_m),
