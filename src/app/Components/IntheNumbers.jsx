@@ -25,10 +25,10 @@ const InTheNumbers = () => {
           <div className="absolute inset-0 z-0 pointer-events-none">
             <BlastedBackground />
           </div>
-          <div className="relative z-10">
+          <div className="relative z-10 h-full flex flex-col">
             <span className="text-[80px] font-medium leading-none">100+</span>
             <div className="flex-grow"></div>
-            <p className="text-lg font-semibold mt-4">Active Client Partnerships (2025)</p>
+            <p className="text-lg font-semibold">Active Client Partnerships (2025)</p>
           </div>
         </div>
 
@@ -36,7 +36,7 @@ const InTheNumbers = () => {
         <div className="bg-[#214585] rounded-2xl px-6 py-4 flex flex-col h-64 text-white">
           <span className="text-[80px] font-light leading-none">500+</span>
           <div className="flex-grow"></div>
-          <p className="text-lg font-semibold mt-4">Assignments Completed YTD</p>
+          <p className="text-lg font-semibold">Assignments Completed YTD</p>
         </div>
 
         {/* Card 3 */}
@@ -44,13 +44,13 @@ const InTheNumbers = () => {
           <div className="absolute inset-0 z-0 pointer-events-none">
             <BlastedBackground/>
           </div>
-          <div className="relative z-10">
+          <div className="relative z-10 h-full flex flex-col">
             <div className="flex items-baseline space-x-1">
               <span className="text-[80px] font-light leading-none">99</span>
               <span className="text-3xl font-light">99%</span>
             </div>
             <div className="flex-grow"></div>
-            <p className="text-lg font-semibold mt-4">On-Time Task Completion (2025 - YTD)</p>
+            <p className="text-lg font-semibold">On-Time Task Completion (2025 - YTD)</p>
           </div>
         </div>
       </div>

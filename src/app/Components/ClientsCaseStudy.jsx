@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Headphones, Settings } from "lucide-react";
 import ContactUsButton from "../UI/Buttons/contactusBtn";
 import Image from "next/image";
 import BlastedBackground from "../UI/CardBackground";
@@ -20,6 +20,7 @@ export default function ClientCaseStudies() {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 lg:gap-8 w-full">
         {/* Case 1 – Customer Support */}
         <div className="relative rounded-xl inverted-top-right overflow-hidden text-white flex flex-col justify-between p-5 md:p-6 min-h-[320px] md:min-h-[380px] lg:min-h-[450px] md:col-span-8 group transition-all duration-500 ease-in-out cursor-pointer">
+          {/* BG Image and Overlay */}
           <div className="absolute inset-0 z-0">
             <Image
               src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
@@ -30,6 +31,13 @@ export default function ClientCaseStudies() {
             />
             <div className="absolute inset-0 bg-blue-900/90"></div>
           </div>
+
+          {/* Icon in corner */}
+          <div className="absolute top-3 right-3 z-10 text-black/80">
+            <Headphones className="w-6 h-6 md:w-8 md:h-8" />
+          </div>
+
+          {/* Text Content */}
           <p className="text-2xl md:text-3xl lg:text-5xl text-start font-medium leading-relaxed relative z-10 mr-auto max-w-xl">
             "BPO Brigade transformed our customer support. Customers now get help much faster."
           </p>
@@ -79,6 +87,7 @@ export default function ClientCaseStudies() {
 
         {/* Case 2 – Back Office Automation */}
         <div className="relative rounded-xl inverted-top-left overflow-hidden text-white flex flex-col justify-between text-end p-5 md:p-6 min-h-[320px] md:min-h-[380px] lg:min-h-[450px] md:col-span-8 group transition-all duration-500 ease-in-out cursor-pointer">
+          {/* BG Image and Overlay */}
           <div className="absolute inset-0 z-0">
             <Image
               src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
@@ -88,6 +97,13 @@ export default function ClientCaseStudies() {
             />
             <div className="absolute inset-0 bg-blue-900/80"></div>
           </div>
+
+          {/* Icon in corner */}
+          <div className="absolute top-3 left-3 z-10 text-black/80">
+            <Settings className="w-6 h-6 md:w-8 md:h-8" />
+          </div>
+
+          {/* Text Content */}
           <p className="text-2xl md:text-3xl lg:text-5xl text-end sm:pt-0 pt-15 font-medium leading-relaxed relative z-10 ml-auto max-w-xl">
             "BPO Brigade rebuilt our back-office, faster operations, fewer errors, big savings."
           </p>
