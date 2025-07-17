@@ -116,11 +116,11 @@ export default function ReelsSlider() {
       <BlastedBackground />
 
       <div className="text-center z-10 px-4 max-w-4xl mx-auto">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2">
-          Content Created By Team
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-2">
+        Powered by Our People
         </h1>
         <p className="text-base sm:text-lg md:text-xl text-black font-medium">
-          From Our BPO Floor to Your Screen
+        Catch the latest content straight from the heart of BPO Brigade.
         </p>
       </div>
 
